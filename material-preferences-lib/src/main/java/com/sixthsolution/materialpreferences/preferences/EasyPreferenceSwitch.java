@@ -15,7 +15,11 @@ import com.sixthsolution.materialpreferences.R;
 public class EasyPreferenceSwitch extends EasyPreferenceBoolean {
 
     private TextView mTextViewTittle;
-    protected int mLayoutResId = R.layout.easy_preference_switch;
+
+    @Override
+    public int getLayout() {
+        return R.layout.easy_preference_switch;
+    }
 
     public EasyPreferenceSwitch(Context context) {
         super(context);
@@ -34,7 +38,7 @@ public class EasyPreferenceSwitch extends EasyPreferenceBoolean {
 
     @Override
     protected void init(Context context, AttributeSet attrs, int defStyleAttr) {
-        inflate(context, mLayoutResId, this);
+        inflate(context, getLayout(), this);
 
         mSwitch = (CompoundButton) findViewById(R.id.easy_switch);
         mTextViewTittle = (TextView) findViewById(R.id.easy_tittle);

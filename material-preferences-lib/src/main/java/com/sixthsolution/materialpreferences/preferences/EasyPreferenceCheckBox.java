@@ -14,7 +14,11 @@ import com.sixthsolution.materialpreferences.R;
 public class EasyPreferenceCheckBox extends EasyPreferenceBoolean {
 
     private TextView mTextViewTittle;
-    protected int mLayoutResId = R.layout.easy_preference_checkbox;
+
+    @Override
+    public int getLayout() {
+        return R.layout.easy_preference_checkbox;
+    }
 
     public EasyPreferenceCheckBox(Context context) {
         super(context);
@@ -33,7 +37,7 @@ public class EasyPreferenceCheckBox extends EasyPreferenceBoolean {
 
     @Override
     protected void init(Context context, AttributeSet attrs, int defStyleAttr) {
-        inflate(context, mLayoutResId, this);
+        inflate(context, getLayout(), this);
 
         mSwitch = (CompoundButton) findViewById(R.id.easy_checkbox);
         mTextViewTittle = (TextView) findViewById(R.id.easy_tittle);

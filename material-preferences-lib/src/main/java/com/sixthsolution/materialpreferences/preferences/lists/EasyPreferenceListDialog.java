@@ -28,6 +28,11 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
     protected TextView mTextViewTittle;
     protected TextView mTextViewSummary;
 
+    @Override
+    public int getLayout() {
+        return R.layout.easy_preference_dialog;
+    }
+
     public EasyPreferenceListDialog(Context context) {
         super(context);
         init(context, null, 0);
@@ -62,7 +67,7 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
             typedArray.recycle();
         }
 
-        View.inflate(context, R.layout.easy_preference_dialog, this);
+        View.inflate(context, getLayout(), this);
 
         mTextViewSummary = (TextView) findViewById(R.id.easy_summary);
         mTextViewTittle = (TextView) findViewById(R.id.easy_tittle);

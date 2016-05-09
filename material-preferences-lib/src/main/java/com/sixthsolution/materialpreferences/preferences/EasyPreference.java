@@ -32,6 +32,7 @@ public abstract class EasyPreference<T> extends LinearLayout
     protected int mLayoutResId;
     protected SharedPreferences mSharedPreferences;
 
+    public abstract int getLayout();
 
     public EasyPreference(Context context) {
         super(context, null, R.attr.ep_style);
