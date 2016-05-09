@@ -6,7 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="16dp"
+    android:orientation="horizontal"
     >
+
+    <TextView
+        android:id="@+id/easy_tittle"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="choose color"
+        />
 
     <com.sixthsolution.tosanbanking.app.ui.settings.preferenceviews.CircleView
         android:id="@+id/easy_color_preview"
@@ -15,11 +25,4 @@
         app:backgroundColor="#33b5e5"
         />
 
-    <TextView
-        android:id="@+id/easy_tittle"
-        style="@style/TextAppearance.AppCompat.Medium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="انتخاب رنگ"
-        />
 </LinearLayout>
