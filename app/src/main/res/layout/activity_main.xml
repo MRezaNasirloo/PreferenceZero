@@ -4,14 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.sixthsolution.materialpreferencesdemo.MainActivity">
+    tools:context="com.sixthsolution.materialpreferencesdemo.MainActivity"
+    >
 
-    <TextView
-        android:text="Hello World!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <com.sixthsolution.materialpreferences.EasyPreferenceListDialog
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/preference_switch_notification_type"
+        android:entries="@array/pref_notification_how_to_show_list_entries"
+        android:entryValues="@array/pref_notification_how_to_show_list_values"
+        app:ep_default="1"
+        app:ep_key="pref_notification_type"
+        app:ep_title="نحوه نمایش"
+        />
+        <!--app:ep_dependency="pref_notification_show"-->
+
 </RelativeLayout>

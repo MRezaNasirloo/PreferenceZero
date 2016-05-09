@@ -7,15 +7,16 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
 
-import com.afollestad.materialdialogs.color.ColorChooserDialog;
-import com.orhanobut.logger.Logger;
-import com.sixthsolution.tosanbanking.app.ui.main.activity.SettingsActivity;
+//import com.afollestad.materialdialogs.color.ColorChooserDialog;
+//import com.orhanobut.logger.Logger;
+//import com.sixthsolution.tosanbanking.app.ui.main.activity.SettingsActivity;
 
 /**
  * @author : Pedramrn@gmail.com Created on: 2016-01-06
  */
 // TODO: 2016-05-03 extracts this to it's own modules as it depends on Martial Dialog library
-public class EasyPreferenceDialogColorChooser extends EasyPreferenceDialog<Integer> {
+public class EasyPreferenceDialogColorChooser {
+/* extends EasyPreferenceDialog<Integer> {
 
     protected int mDefault;
     protected TextView mTextViewTittle;
@@ -108,5 +109,5 @@ public class EasyPreferenceDialogColorChooser extends EasyPreferenceDialog<Integ
     @Override
     public Integer load() {
         return mSharedPreferences.getInt(mKey, mDefault);
-    }
+    }*/
 }

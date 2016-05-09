@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Material Preferences Demo</string>
+
+    <string-array name="pref_notification_how_to_show_list_entries">
+        <item>اعلان ها</item>
+        <item>واریز ها</item>
+        <item>پرداخت ها</item>
+        <item>همه</item>
+    </string-array>
+    <string-array name="pref_notification_how_to_show_list_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
 </resources>

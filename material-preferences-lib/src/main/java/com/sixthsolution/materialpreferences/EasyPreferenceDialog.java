@@ -1,11 +1,15 @@
 package com.sixthsolution.materialpreferences;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.view.View;
 
 /**
  * @author : Pedramrn@gmail.com Created on: 2016-01-06
+ *
+ * Base class for List type preferecnces
  */
 public abstract class EasyPreferenceDialog<T> extends EasyPreference<T> {
 
@@ -29,5 +33,14 @@ public abstract class EasyPreferenceDialog<T> extends EasyPreference<T> {
     /**
      * show A dialog to show in onClick
      */
-    protected abstract void show();
+    protected void show() {
+        getDialog().show((AppCompatActivity) getContext());
+    }
+
+    /**
+     * Implement this method and create a {@link Dialog} to show
+     *
+     * @return Dialog
+     */
+    protected abstract Showable getDialog();
 }

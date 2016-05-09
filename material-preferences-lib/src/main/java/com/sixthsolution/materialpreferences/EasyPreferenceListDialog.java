@@ -3,16 +3,15 @@ package com.sixthsolution.materialpreferences;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
-import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.View;
 import android.widget.TextView;
 
-import com.orhanobut.logger.Logger;
 
 /**
  * @author : Pedramrn@gmail.com Created on: 2016-01-06
+ *
+ * It's Component to show a preferecne status and save/load the data from {@link SharedPreferences}
  */
 public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
 
@@ -86,15 +85,17 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
     }
 
     @Override
-    public void onClick(View v) {
-        show();
-    }
-
-    @Override
-    protected void show() {
-        // // TODO: 2016-05-03 use your own builder or bundle
-        ListDialog mListDialog = new ListDialogBuilder(mArrayEntries, mKey, "Select", load(), "Single list").build();
-        mListDialog.show(((AppCompatActivity) getContext()), "someTag");
+    protected Showable getDialog() {
+        // TODO: 2016-05-03 use your own builder or bundle ---> DONE
+        return SingleChoiceListDialog.newInstance(load(), mArrayEntries, "Single List")
+                .setOnItemSelectedListener(new EasyDialogFragment.OnItemSelectedListener<Integer>() {
+                    @Override
+                    public void OnItemSelected(Integer which) {
+                        save(which);
+                    }
+                });
+        /*SingleChoiceListDialog mListDialog = new ListDialogBuilder(mArrayEntries, mKey, "Select", load(), "Single list").build();
+        mListDialog.show(((AppCompatActivity) getContext()), "someTag");*/
     }
 
     @Override
