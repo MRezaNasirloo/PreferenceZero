@@ -1,4 +1,4 @@
-package com.sixthsolution.materialpreferences;
+package com.sixthsolution.materialpreferences.preferences;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -9,6 +9,9 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+
+import com.sixthsolution.materialpreferences.PersistPref;
+import com.sixthsolution.materialpreferences.R;
 
 /**
  * @author : Pedramrn@gmail.com Created on: 2016-01-05

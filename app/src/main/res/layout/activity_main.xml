@@ -12,7 +12,7 @@
     tools:context="com.sixthsolution.materialpreferencesdemo.MainActivity"
     >
 
-    <com.sixthsolution.materialpreferences.EasyPreferenceListDialog
+    <com.sixthsolution.materialpreferences.preferences.lists.EasyPreferenceListDialog
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/preference_switch_notification_type"

@@ -1,11 +1,17 @@
-package com.sixthsolution.materialpreferences;
+package com.sixthsolution.materialpreferences.preferences.lists;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
+
+import com.sixthsolution.materialpreferences.EasyDialogFragment;
+import com.sixthsolution.materialpreferences.R;
+import com.sixthsolution.materialpreferences.Showable;
+import com.sixthsolution.materialpreferences.SingleChoiceListDialog;
 
 
 /**
@@ -56,7 +62,7 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
             typedArray.recycle();
         }
 
-        inflate(context, R.layout.easy_preference_dialog, this);
+        View.inflate(context, R.layout.easy_preference_dialog, this);
 
         mTextViewSummary = (TextView) findViewById(R.id.easy_summary);
         mTextViewTittle = (TextView) findViewById(R.id.easy_tittle);

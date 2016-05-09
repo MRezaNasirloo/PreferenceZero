@@ -1,10 +1,12 @@
-package com.sixthsolution.materialpreferences;
+package com.sixthsolution.materialpreferences.preferences;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+
+import com.sixthsolution.materialpreferences.R;
 
 /**
  * @author : Pedramrn@gmail.com Created on: 2016-01-05
