@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.v4.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,16 +12,96 @@
     tools:context="com.sixthsolution.materialpreferencesdemo.MainActivity"
     >
 
-    <com.sixthsolution.materialpreferences.preferences.lists.EasyPreferenceListDialog
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/preference_switch_notification_type"
-        android:entries="@array/pref_notification_how_to_show_list_entries"
-        android:entryValues="@array/pref_notification_how_to_show_list_values"
-        app:ep_default="1"
-        app:ep_key="pref_notification_type"
-        app:ep_title="نحوه نمایش"
-        />
-        <!--app:ep_dependency="pref_notification_show"-->
+        android:orientation="vertical"
+        >
 
-</RelativeLayout>
+        <!-- TODO: 2016-05-10 add header -->
+        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitch
+            android:id="@+id/preferences_auto_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ep_title="@string/auto_location"
+            app:ep_default="true"
+            app:ep_key="pref_auto_location"
+            />
+
+        <!-- TODO: 2016-05-10 add header -->
+        <com.sixthsolution.materialpreferences.preferences.lists.EasyPreferenceListDialog
+            android:id="@+id/preferences_choose_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/pref_language_list_entries"
+            android:entryValues="@array/pref_language_list_value"
+            app:ep_default="1"
+            app:ep_title="@string/language"
+            app:ep_key="pref_choose_language"
+            />
+
+        <com.sixthsolution.materialpreferences.preferences.lists.EasyPreferenceListDialog
+            android:id="@+id/preferences_choose_date_format"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/pref_date_format_list_entries"
+            android:entryValues="@array/pref_date_format_list_value"
+            app:ep_default="1"
+            app:ep_title="@string/date_format"
+            app:ep_key="pref_date_format"
+            />
+
+        <!-- TODO: 2016-05-10 create a custom class to set textOn & textOff-->
+        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitch
+            android:id="@+id/preferences_clock_format"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ep_title="@string/clock_format"
+            app:ep_default="true"
+            app:ep_key="pref_clock_format"
+            />
+
+        <!-- TODO: 2016-05-10 add header -->
+        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitch
+            android:id="@+id/preferences_feel_temp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ep_title="@string/feel_temp"
+            app:ep_default="true"
+            app:ep_key="pref_feel_temp"
+            />
+
+
+        <com.sixthsolution.materialpreferences.preferences.lists.EasyPreferenceListDialog
+            android:id="@+id/preferences_choose_weather_provider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/pref_weather_provider_list_entries"
+            android:entryValues="@array/pref_weather_provider_list_value"
+            app:ep_default="1"
+            app:ep_title="@string/weather_provider"
+            app:ep_key="pref_weather_provider"
+            />
+
+        <com.sixthsolution.materialpreferences.preferences.lists.EasyPreferenceListDialog
+            android:id="@+id/preferences_choose_radar_provider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/pref_radar_provider_list_entries"
+            android:entryValues="@array/pref_radar_provider_list_value"
+            app:ep_default="1"
+            app:ep_title="@string/radar_provider"
+            app:ep_key="pref_radar_provider"
+            />
+
+        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitch
+            android:id="@+id/preferences_measurement_unit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ep_title="@string/measurement_unit"
+            app:ep_default="true"
+            app:ep_key="pref_measurement_unit"
+            />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
