@@ -14,6 +14,7 @@
         <item>4</item>
     </string-array>
 
+    <string name="location_setting">Location Settings</string>
     <string name="auto_location">Auto Location</string>
 
     <string name="language">Language</string>
@@ -28,6 +29,7 @@
         <item>3</item>
     </string-array>
 
+    <string name="clock_date_setting">Clock And Date Settings</string>
     <string name="date_format">Date Format</string>
     <string-array name="pref_date_format_list_entries">
         <item>5/16/2016/</item>
@@ -43,6 +45,7 @@
     <string name="clock_format">Clock Format</string>
     <string name="feel_temp">Use Feel Like Temperature</string>
 
+    <string name="weather_settings">Weather Settings</string>
     <string name="weather_provider">Weather Provider</string>
     <string-array name="pref_weather_provider_list_entries">
         <item>provider 1</item>

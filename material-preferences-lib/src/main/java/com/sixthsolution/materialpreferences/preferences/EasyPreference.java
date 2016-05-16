@@ -30,6 +30,7 @@ public abstract class EasyPreference<T> extends LinearLayout
     protected String mTittle;
     protected String mSummary;
     protected int mLayoutResId;
+    protected int mIcon;
     protected SharedPreferences mSharedPreferences;
 
     public abstract int getLayout();
@@ -66,6 +67,7 @@ public abstract class EasyPreference<T> extends LinearLayout
         mTittle = typedArray.getString(R.styleable.EasyPreference_ep_title);
         mSummary = typedArray.getString(R.styleable.EasyPreference_ep_summary);
         mDependency = typedArray.getString(R.styleable.EasyPreference_ep_dependency);
+        mIcon = typedArray.getResourceId(R.styleable.EasyPreference_ep_icon, R.drawable.default_icon);
 
         typedArray.recycle();
     }

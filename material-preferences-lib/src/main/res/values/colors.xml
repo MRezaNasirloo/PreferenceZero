@@ -2,4 +2,5 @@
 <resources>
     <color name="colorPrimary">#CCC</color>
     <color name="gray_light">#CCC</color>
+    <color name="blue">#398be2</color>
 </resources>
