@@ -2,36 +2,36 @@ package com.sixthsolution.materialpreferences.preferences;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.v7.widget.SwitchCompat;
 import android.util.AttributeSet;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.sixthsolution.materialpreferences.R;
 
 /**
- * Created by mehdok on 5/16/2016.
+ * @author : Pedramrn@gmail.com
+ *         Created on: 2016-01-05
  */
-public class EasyPreferenceSwitch extends EasyPreferenceBoolean {
+public class EasyPreferenceCompoundSwitch extends EasyPreferenceBoolean {
+
     private TextView mTextViewTittle;
-    private String mOffText;
-    private String mOnText;
 
     @Override
     public int getLayout() {
         return R.layout.easy_preference_switch;
     }
 
-    public EasyPreferenceSwitch(Context context) {
+    public EasyPreferenceCompoundSwitch(Context context) {
         super(context);
         init(context, null, 0);
     }
 
-    public EasyPreferenceSwitch(Context context, AttributeSet attrs) {
+    public EasyPreferenceCompoundSwitch(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs, 0);
     }
 
-    public EasyPreferenceSwitch(Context context, AttributeSet attrs, int defStyleAttr) {
+    public EasyPreferenceCompoundSwitch(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr);
     }
@@ -40,7 +40,7 @@ public class EasyPreferenceSwitch extends EasyPreferenceBoolean {
     protected void init(Context context, AttributeSet attrs, int defStyleAttr) {
         inflate(context, getLayout(), this);
 
-        mSwitch = (SwitchCompat) findViewById(R.id.easy_switch);
+        mSwitch = (CompoundButton) findViewById(R.id.easy_switch);
         mTextViewTittle = (TextView) findViewById(R.id.easy_tittle);
 
         // Load attributes
@@ -48,18 +48,14 @@ public class EasyPreferenceSwitch extends EasyPreferenceBoolean {
                 attrs, R.styleable.EasyPreference, defStyleAttr, 0);
 
         mDefault = typedArray.getBoolean(R.styleable.EasyPreference_ep_default, mDefault);
-        mOffText = typedArray.getString(R.styleable.EasyPreference_ep_off_text);
-        mOnText = typedArray.getString(R.styleable.EasyPreference_ep_on_text);
         typedArray.recycle();
-
-        ((SwitchCompat)mSwitch).setTextOff(mOffText);
-        ((SwitchCompat)mSwitch).setTextOn(mOnText);
-        ((SwitchCompat)mSwitch).setShowText(true);
 
         // Save the default value if is not set already.
         if (!isInEditMode()) {
             save(load());
         }
+        // TODO: 2016-01-05 add the generic type to load method's arg .
+
     }
 
     @Override
@@ -68,5 +64,4 @@ public class EasyPreferenceSwitch extends EasyPreferenceBoolean {
         mTextViewTittle.setText(mTittle);
         mSwitch.setChecked(load());
     }
-
 }

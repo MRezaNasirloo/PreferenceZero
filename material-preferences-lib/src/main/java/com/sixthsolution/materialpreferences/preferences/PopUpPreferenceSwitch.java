@@ -10,7 +10,7 @@ import android.util.AttributeSet;
 /**
  * Created by saeed on 4/11/2016.
  */
-public class PopUpPreferenceSwitch extends EasyPreferenceSwitch {
+public class PopUpPreferenceSwitch extends EasyPreferenceCompoundSwitch {
     public static int OVERLAY_PERMISSION_REQ_CODE = 1234;
 
     public PopUpPreferenceSwitch(Context context) {

@@ -19,7 +19,7 @@
         >
 
         <!-- TODO: 2016-05-10 add header -->
-        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitch
+        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceCompoundSwitch
             android:id="@+id/preferences_auto_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -59,10 +59,12 @@
             app:ep_title="@string/clock_format"
             app:ep_default="true"
             app:ep_key="pref_clock_format"
+            app:ep_off_text="24"
+            app:ep_on_text="12"
             />
 
         <!-- TODO: 2016-05-10 add header -->
-        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitch
+        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceCompoundSwitch
             android:id="@+id/preferences_feel_temp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -101,6 +103,8 @@
             app:ep_title="@string/measurement_unit"
             app:ep_default="true"
             app:ep_key="pref_measurement_unit"
+            app:ep_off_text="C"
+            app:ep_on_text="F"
             />
 
     </LinearLayout>
