@@ -59,6 +59,10 @@ public abstract class EasyPreference<T> extends LinearLayout
                 attrs, R.styleable.EasyPreference, defStyleAttr, 0);
 
         mKey = typedArray.getString(R.styleable.EasyPreference_ep_key);
+        if (mKey == null) {
+            throw new RuntimeException("You must set ep_key, it is required");
+        }
+
         mTittle = typedArray.getString(R.styleable.EasyPreference_ep_title);
         mSummary = typedArray.getString(R.styleable.EasyPreference_ep_summary);
         mDependency = typedArray.getString(R.styleable.EasyPreference_ep_dependency);
