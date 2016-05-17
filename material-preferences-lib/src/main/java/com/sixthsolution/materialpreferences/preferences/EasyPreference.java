@@ -8,7 +8,7 @@ import android.preference.PreferenceManager;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.sixthsolution.materialpreferences.PersistPref;
 import com.sixthsolution.materialpreferences.R;
@@ -19,7 +19,7 @@ import com.sixthsolution.materialpreferences.R;
  *         A replacement for android {@link Preference} class. This the base class for
  *         EasyPreference.
  */
-public abstract class EasyPreference<T> extends LinearLayout
+public abstract class EasyPreference<T> extends RelativeLayout
         implements SharedPreferences.OnSharedPreferenceChangeListener, View.OnClickListener, PersistPref<T> {
 
 
@@ -69,7 +69,7 @@ public abstract class EasyPreference<T> extends LinearLayout
         mSummary = typedArray.getString(R.styleable.EasyPreference_ep_summary);
         mDependency = typedArray.getString(R.styleable.EasyPreference_ep_dependency);
         mDetail = typedArray.getString(R.styleable.EasyPreference_ep_detail);
-        mIcon = typedArray.getResourceId(R.styleable.EasyPreference_ep_icon, R.drawable.default_icon);
+        mIcon = typedArray.getResourceId(R.styleable.EasyPreference_ep_icon, -1);
 
         typedArray.recycle();
     }

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.v7.widget.SwitchCompat;
 import android.util.AttributeSet;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sixthsolution.materialpreferences.R;
@@ -15,6 +16,8 @@ public class EasyPreferenceSwitch extends EasyPreferenceBoolean {
     private TextView mTextViewTittle;
     private String mOffText;
     private String mOnText;
+    private TextView tvDetail;
+    private ImageView imgIcon;
 
     @Override
     public int getLayout() {
@@ -42,6 +45,22 @@ public class EasyPreferenceSwitch extends EasyPreferenceBoolean {
 
         mSwitch = (SwitchCompat) findViewById(R.id.easy_switch);
         mTextViewTittle = (TextView) findViewById(R.id.easy_tittle);
+        tvDetail = (TextView) findViewById(R.id.easy_detail);
+        imgIcon = (ImageView) findViewById(R.id.easy_icon);
+
+        // show or hide detail
+        if (mDetail == null) {
+            tvDetail.setVisibility(GONE);
+        } else {
+            tvDetail.setText(mDetail);
+        }
+
+        // show or hide icon
+        if (mIcon < 0) {
+            imgIcon.setVisibility(INVISIBLE);
+        } else {
+            imgIcon.setImageResource(mIcon);
+        }
 
         // Load attributes
         final TypedArray typedArray = getContext().obtainStyledAttributes(

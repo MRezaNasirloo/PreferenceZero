@@ -58,11 +58,11 @@
         <item>3</item>
     </string-array>
 
-    <string name="radar_provider">Weather Provider</string>
+    <string name="radar_provider">Radar Provider</string>
     <string-array name="pref_radar_provider_list_entries">
-        <item>provider 1</item>
-        <item>provider 2</item>
-        <item>provider 3</item>
+        <item>Radar 1</item>
+        <item>Radar 2</item>
+        <item>Radar 3</item>
     </string-array>
     <string-array name="pref_radar_provider_list_value">
         <item>1</item>

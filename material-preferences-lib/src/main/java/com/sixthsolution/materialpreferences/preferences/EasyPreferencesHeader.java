@@ -43,7 +43,13 @@ public class EasyPreferencesHeader extends EasyPreference<Void> {
         imgIcon = (ImageView) findViewById(R.id.easy_group_icon);
 
         tvTitle.setText(mTittle);
-        imgIcon.setImageResource(mIcon);
+
+        // show or hide icon
+        if (mIcon < 0) {
+            imgIcon.setVisibility(GONE);
+        } else {
+            imgIcon.setImageResource(mIcon);
+        }
     }
 
     // This class is not interactive, so th following methods has no use

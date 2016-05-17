@@ -6,6 +6,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sixthsolution.materialpreferences.EasyDialogFragment;
@@ -27,6 +28,8 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
     protected int mDefault;
     protected TextView mTextViewTittle;
     protected TextView mTextViewSummary;
+    private TextView tvDetail;
+    private ImageView imgIcon;
 
     @Override
     public int getLayout() {
@@ -71,6 +74,22 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
 
         mTextViewSummary = (TextView) findViewById(R.id.easy_summary);
         mTextViewTittle = (TextView) findViewById(R.id.easy_tittle);
+        tvDetail = (TextView) findViewById(R.id.easy_detail);
+        imgIcon = (ImageView) findViewById(R.id.easy_icon);
+
+        // show or hide detail
+        if (mDetail == null) {
+            tvDetail.setVisibility(GONE);
+        } else {
+            tvDetail.setText(mDetail);
+        }
+
+        // show or hide icon
+        if (mIcon < 0) {
+            imgIcon.setVisibility(INVISIBLE);
+        } else {
+            imgIcon.setImageResource(mIcon);
+        }
 
 
         // Save the default value if is not set already.
