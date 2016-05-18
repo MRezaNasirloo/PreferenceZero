@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     >
 
+
     <ImageView
         android:id="@+id/easy_icon"
         android:layout_width="@dimen/easy_icon_size"
@@ -14,18 +15,7 @@
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:layout_margin="@dimen/default_margin"
-        android:src="@drawable/default_icon"
-        />
-
-    <android.support.v7.widget.AppCompatCheckBox
-        android:id="@+id/easy_checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:clickable="false"
-        android:focusable="false"
+        android:src="@mipmap/ic_launcher"
         />
 
     <TextView
@@ -35,9 +25,6 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_toEndOf="@id/easy_icon"
-        android:layout_toLeftOf="@id/easy_checkbox"
-        android:layout_toRightOf="@id/easy_icon"
-        android:layout_toStartOf="@id/easy_checkbox"
         android:gravity="start"
         android:text="password status"
         />
@@ -54,4 +41,14 @@
         android:text="detail"
         />
 
+    <android.support.v7.widget.AppCompatCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/easy_checkable"
+        android:layout_above="@+id/easy_detail"
+        android:layout_alignRight="@+id/easy_detail"
+        android:layout_alignEnd="@+id/easy_detail"
+        android:clickable="false"
+        android:focusable="false"
+        />
 </RelativeLayout>

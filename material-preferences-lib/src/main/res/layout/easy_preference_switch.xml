@@ -18,7 +18,7 @@
         />
 
     <android.support.v7.widget.SwitchCompat
-        android:id="@+id/easy_switch"
+        android:id="@+id/easy_checkable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -35,9 +35,9 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_toEndOf="@id/easy_icon"
-        android:layout_toLeftOf="@id/easy_switch"
+        android:layout_toLeftOf="@id/easy_checkable"
         android:layout_toRightOf="@id/easy_icon"
-        android:layout_toStartOf="@id/easy_switch"
+        android:layout_toStartOf="@id/easy_checkable"
         android:gravity="start"
         android:text="password status"
         />
