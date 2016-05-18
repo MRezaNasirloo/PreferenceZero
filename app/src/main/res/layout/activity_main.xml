@@ -26,7 +26,7 @@
             app:ep_icon="@drawable/default_icon"
             />
 
-        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitchCompoundButton
+        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitch
             android:id="@+id/preferences_auto_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
             app:ep_key="pref_date_format"
             />
 
-        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitchCompoundButton
+        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitch
             android:id="@+id/preferences_clock_format"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
             app:ep_icon="@drawable/default_icon"
             />
 
-        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitchCompoundButton
+        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitch
             android:id="@+id/preferences_feel_temp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -126,7 +126,7 @@
             app:ep_key="pref_radar_provider"
             />
 
-        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitchCompoundButton
+        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitch
             android:id="@+id/preferences_measurement_unit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -33,7 +33,7 @@ public abstract class EasyPreference<T> extends RelativeLayout
     protected int iconResId;
     protected SharedPreferences sharedPreferences;
 
-    public abstract int getLayout();
+    protected abstract int getLayout();
 
     public EasyPreference(Context context) {
         super(context, null, R.attr.ep_style);

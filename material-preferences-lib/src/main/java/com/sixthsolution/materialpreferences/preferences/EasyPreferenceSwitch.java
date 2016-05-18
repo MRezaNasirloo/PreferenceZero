@@ -1,6 +1,7 @@
 package com.sixthsolution.materialpreferences.preferences;
 
 import android.content.Context;
+import android.support.v7.widget.SwitchCompat;
 import android.util.AttributeSet;
 
 import com.sixthsolution.materialpreferences.R;
@@ -25,5 +26,15 @@ public class EasyPreferenceSwitch extends EasyPreferenceSwitchCompoundButton {
     @Override
     public int getLayout() {
         return R.layout.easy_preference_switch;
+    }
+
+    public void setOnText(String onText) {
+        ((SwitchCompat) compoundButton).setTextOn(onText);
+        ((SwitchCompat) compoundButton).setShowText(true);
+    }
+
+    public void setOffText(String offText) {
+        ((SwitchCompat) compoundButton).setTextOff(offText);
+        ((SwitchCompat) compoundButton).setShowText(true);
     }
 }

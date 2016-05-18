@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.sixthsolution.materialpreferences.preferences.EasyPreferenceCheckBox;
-import com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitchCompoundButton;
+import com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitch;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,17 +13,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        EasyPreferenceSwitchCompoundButton tempSwitch =
-                (EasyPreferenceSwitchCompoundButton) findViewById(R.id.preferences_measurement_unit);
+        EasyPreferenceSwitch tempSwitch = (EasyPreferenceSwitch) findViewById(R.id.preferences_measurement_unit);
         tempSwitch.setOffText("F");
         tempSwitch.setOnText("C");
 
-        EasyPreferenceSwitchCompoundButton clockSwitch =
-                (EasyPreferenceSwitchCompoundButton) findViewById(R.id.preferences_clock_format);
+        EasyPreferenceSwitch clockSwitch =
+                (EasyPreferenceSwitch) findViewById(R.id.preferences_clock_format);
         clockSwitch.setOffText("24");
         clockSwitch.setOnText("12");
 
         EasyPreferenceCheckBox checkBox = (EasyPreferenceCheckBox) findViewById(R.id.preferences_auto_update);
-        checkBox.setOffText("foo");
     }
 }
