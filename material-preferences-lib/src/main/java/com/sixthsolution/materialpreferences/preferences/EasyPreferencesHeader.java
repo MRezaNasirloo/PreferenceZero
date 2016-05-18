@@ -1,9 +1,10 @@
 package com.sixthsolution.materialpreferences.preferences;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
-import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.sixthsolution.materialpreferences.R;
@@ -11,12 +12,14 @@ import com.sixthsolution.materialpreferences.R;
 /**
  * Created by mehdok on 5/16/2016.
  */
-public class EasyPreferencesHeader extends EasyPreference<Void> {
+public class EasyPreferencesHeader extends LinearLayout {
 
     private TextView tvTitle;
     private ImageView imgIcon;
 
-    @Override
+    protected String tittle;
+    protected int iconResId;
+
     public int getLayout() {
         return R.layout.easy_preferences_group_header;
     }
@@ -42,6 +45,12 @@ public class EasyPreferencesHeader extends EasyPreference<Void> {
         tvTitle = (TextView) findViewById(R.id.easy_group_title);
         imgIcon = (ImageView) findViewById(R.id.easy_group_icon);
 
+        // Load attributes
+        final TypedArray typedArray = getContext().obtainStyledAttributes(
+                attrs, R.styleable.EasyPreference, defStyleAttr, 0);
+        tittle = typedArray.getString(R.styleable.EasyPreference_ep_title);
+        iconResId = typedArray.getResourceId(R.styleable.EasyPreference_ep_icon, -1);
+
         tvTitle.setText(tittle);
 
         // show or hide icon
@@ -50,21 +59,7 @@ public class EasyPreferencesHeader extends EasyPreference<Void> {
         } else {
             imgIcon.setImageResource(iconResId);
         }
-    }
 
-    // This class is not interactive, so th following methods has no use
-    @Override
-    public void onClick(View view) {
-
-    }
-
-    @Override
-    public void save(Void pref) {
-
-    }
-
-    @Override
-    public Void load() {
-        return null;
+        typedArray.recycle();
     }
 }

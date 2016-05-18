@@ -26,7 +26,7 @@
             app:ep_icon="@drawable/default_icon"
             />
 
-        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceCompoundSwitch
+        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitch
             android:id="@+id/preferences_auto_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
             app:ep_title="Auto Update"
             app:ep_default="false"
             app:ep_key="pref_auto_update"
-            app:ep_detail="Automatic Update"
+            app:ep_detail_on="Automatic Update"
             />
 
         <com.sixthsolution.materialpreferences.preferences.EasyPreferencesHeader
@@ -83,8 +83,6 @@
             app:ep_title="@string/clock_format"
             app:ep_default="true"
             app:ep_key="pref_clock_format"
-            app:ep_off_text="24"
-            app:ep_on_text="12"
             />
 
         <com.sixthsolution.materialpreferences.preferences.EasyPreferencesHeader
@@ -95,14 +93,14 @@
             app:ep_icon="@drawable/default_icon"
             />
 
-        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceCompoundSwitch
+        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitch
             android:id="@+id/preferences_feel_temp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:ep_title="@string/feel_temp"
             app:ep_default="true"
             app:ep_key="pref_feel_temp"
-            app:ep_detail="Real temp may be 24 but it feels like 18"
+            app:ep_detail_on="Real temp may be 24 but it feels like 18"
             />
 
 
@@ -135,8 +133,6 @@
             app:ep_title="@string/measurement_unit"
             app:ep_default="true"
             app:ep_key="pref_measurement_unit"
-            app:ep_off_text="C"
-            app:ep_on_text="F"
             />
 
     </LinearLayout>

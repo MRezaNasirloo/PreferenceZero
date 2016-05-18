@@ -8,7 +8,7 @@ import com.sixthsolution.materialpreferences.R;
 /**
  * @author : Pedramrn@gmail.com Created on: 2016-01-05
  */
-public class EasyPreferenceCheckBox extends EasyPreferenceCompoundSwitch {
+public class EasyPreferenceCheckBox extends EasyPreferenceSwitch {
 
     @Override
     public int getLayout() {

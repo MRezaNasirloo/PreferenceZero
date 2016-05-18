@@ -13,10 +13,9 @@
         <attr name="ep_default" format="string"/>
         <attr name="ep_style" format="reference"/>
         <attr name="ep_dependency" format="string"/>
-        <attr name="ep_off_text" format="string"/>
-        <attr name="ep_on_text" format="string"/>
         <attr name="ep_icon" format="reference"/>
-        <attr name="ep_detail" format="string"/>
+        <attr name="ep_detail_on" format="string"/>
+        <attr name="ep_detail_off" format="string"/>
         <attr name="android:entries"/>
         <attr name="android:entryValues"/>
     </declare-styleable>

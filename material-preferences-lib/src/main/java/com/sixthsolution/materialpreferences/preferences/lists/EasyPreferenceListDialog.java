@@ -78,10 +78,10 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
         imgIcon = (ImageView) findViewById(R.id.easy_icon);
 
         // show or hide detailText
-        if (detailText == null) {
+        if (detailTextON == null) {
             tvDetail.setVisibility(GONE);
         } else {
-            tvDetail.setText(detailText);
+            tvDetail.setText(detailTextON);
         }
 
         // show or hide icon

@@ -4,20 +4,21 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.v7.widget.SwitchCompat;
 import android.util.AttributeSet;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sixthsolution.materialpreferences.R;
 
 /**
- * Created by mehdok on 5/16/2016.
+ * @author : Pedramrn@gmail.com
+ *         Created on: 2016-01-05
  */
 public class EasyPreferenceSwitch extends EasyPreferenceBoolean {
-    private TextView mTextViewTittle;
-    private String mOffText;
-    private String mOnText;
-    private TextView tvDetail;
-    private ImageView imgIcon;
+
+    protected TextView textViewTittle;
+    protected TextView textViewDetail;
+    protected ImageView imageViewIcon;
 
     @Override
     public int getLayout() {
@@ -43,23 +44,23 @@ public class EasyPreferenceSwitch extends EasyPreferenceBoolean {
     protected void init(Context context, AttributeSet attrs, int defStyleAttr) {
         inflate(context, getLayout(), this);
 
-        compoundButton = (SwitchCompat) findViewById(R.id.easy_checkable);
-        mTextViewTittle = (TextView) findViewById(R.id.easy_tittle);
-        tvDetail = (TextView) findViewById(R.id.easy_detail);
-        imgIcon = (ImageView) findViewById(R.id.easy_icon);
+        compoundButton = (CompoundButton) findViewById(R.id.easy_checkable);
+        textViewTittle = (TextView) findViewById(R.id.easy_tittle);
+        textViewDetail = (TextView) findViewById(R.id.easy_detail);
+        imageViewIcon = (ImageView) findViewById(R.id.easy_icon);
 
         // show or hide detailText
-        if (detailText == null) {
-            tvDetail.setVisibility(GONE);
+        if (detailTextON == null) {
+            textViewDetail.setVisibility(GONE);
         } else {
-            tvDetail.setText(detailText);
+            textViewDetail.setText(detailTextON);
         }
 
         // show or hide icon
         if (iconResId < 0) {
-            imgIcon.setVisibility(INVISIBLE);
+            imageViewIcon.setVisibility(INVISIBLE);
         } else {
-            imgIcon.setImageResource(iconResId);
+            imageViewIcon.setImageResource(iconResId);
         }
 
         // Load attributes
@@ -67,25 +68,30 @@ public class EasyPreferenceSwitch extends EasyPreferenceBoolean {
                 attrs, R.styleable.EasyPreference, defStyleAttr, 0);
 
         defaultValue = typedArray.getBoolean(R.styleable.EasyPreference_ep_default, defaultValue);
-        mOffText = typedArray.getString(R.styleable.EasyPreference_ep_off_text);
-        mOnText = typedArray.getString(R.styleable.EasyPreference_ep_on_text);
         typedArray.recycle();
-
-        ((SwitchCompat) compoundButton).setTextOff(mOffText);
-        ((SwitchCompat) compoundButton).setTextOn(mOnText);
-        ((SwitchCompat) compoundButton).setShowText(true);
 
         // Save the default value if is not set already.
         if (!isInEditMode()) {
             save(load());
         }
+        // TODO: 2016-01-05 add the generic type to load method's arg .
+
     }
 
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        mTextViewTittle.setText(tittle);
+        textViewTittle.setText(tittle);
         compoundButton.setChecked(load());
     }
 
+    public void setOnText(String onText) {
+        ((SwitchCompat) compoundButton).setTextOn(onText);
+        ((SwitchCompat) compoundButton).setShowText(true);
+    }
+
+    public void setOffText(String offText) {
+        ((SwitchCompat) compoundButton).setTextOff(offText);
+        ((SwitchCompat) compoundButton).setShowText(true);
+    }
 }

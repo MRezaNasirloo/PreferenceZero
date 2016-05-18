@@ -28,7 +28,8 @@ public abstract class EasyPreference<T> extends RelativeLayout
     protected String dependency;
     protected String tittle;
     protected String summary;
-    protected String detailText;
+    protected String detailTextON;
+    protected String detailTextOFF;
     protected int iconResId;
     protected SharedPreferences sharedPreferences;
 
@@ -66,7 +67,8 @@ public abstract class EasyPreference<T> extends RelativeLayout
         tittle = typedArray.getString(R.styleable.EasyPreference_ep_title);
         summary = typedArray.getString(R.styleable.EasyPreference_ep_summary);
         dependency = typedArray.getString(R.styleable.EasyPreference_ep_dependency);
-        detailText = typedArray.getString(R.styleable.EasyPreference_ep_detail);
+        detailTextON = typedArray.getString(R.styleable.EasyPreference_ep_detail_on);
+        detailTextOFF = typedArray.getString(R.styleable.EasyPreference_ep_detail_off);
         iconResId = typedArray.getResourceId(R.styleable.EasyPreference_ep_icon, -1);
 
         typedArray.recycle();
