@@ -8,12 +8,7 @@ import com.sixthsolution.materialpreferences.R;
 /**
  * @author : Pedramrn@gmail.com Created on: 2016-01-05
  */
-public class EasyPreferenceCheckBox extends EasyPreferenceSwitch {
-
-    @Override
-    public int getLayout() {
-        return R.layout.easy_preference_checkbox;
-    }
+public class EasyPreferenceCheckBox extends EasyPreferenceSwitchCompoundButton {
 
     public EasyPreferenceCheckBox(Context context) {
         super(context);
@@ -28,9 +23,7 @@ public class EasyPreferenceCheckBox extends EasyPreferenceSwitch {
     }
 
     @Override
-    protected void onAttachedToWindow() {
-        super.onAttachedToWindow();
-        textViewTittle.setText(tittle);
-        compoundButton.setChecked(load());
+    public int getLayout() {
+        return R.layout.easy_preference_checkbox;
     }
 }

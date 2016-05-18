@@ -28,7 +28,7 @@ public class PopUpPreferenceSwitch extends EasyPreferenceSwitch {
     @Override
     public void save(Boolean pref) {
         super.save(pref);
-        if(pref)
+        if (pref)
             checkDrawPermission();
     }
 
