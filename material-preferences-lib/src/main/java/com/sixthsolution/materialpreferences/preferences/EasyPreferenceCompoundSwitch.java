@@ -15,9 +15,9 @@ import com.sixthsolution.materialpreferences.R;
  */
 public class EasyPreferenceCompoundSwitch extends EasyPreferenceBoolean {
 
-    private TextView mTextViewTittle;
-    private TextView tvDetail;
-    private ImageView imgIcon;
+    protected TextView textViewTittle;
+    protected TextView textViewDetail;
+    protected ImageView imageViewIcon;
 
     @Override
     public int getLayout() {
@@ -43,30 +43,30 @@ public class EasyPreferenceCompoundSwitch extends EasyPreferenceBoolean {
     protected void init(Context context, AttributeSet attrs, int defStyleAttr) {
         inflate(context, getLayout(), this);
 
-        mSwitch = (CompoundButton) findViewById(R.id.easy_switch);
-        mTextViewTittle = (TextView) findViewById(R.id.easy_tittle);
-        tvDetail = (TextView) findViewById(R.id.easy_detail);
-        imgIcon = (ImageView) findViewById(R.id.easy_icon);
+        compoundButton = (CompoundButton) findViewById(R.id.easy_checkable);
+        textViewTittle = (TextView) findViewById(R.id.easy_tittle);
+        textViewDetail = (TextView) findViewById(R.id.easy_detail);
+        imageViewIcon = (ImageView) findViewById(R.id.easy_icon);
 
-        // show or hide detail
-        if (mDetail == null) {
-            tvDetail.setVisibility(GONE);
+        // show or hide detailText
+        if (detailText == null) {
+            textViewDetail.setVisibility(GONE);
         } else {
-            tvDetail.setText(mDetail);
+            textViewDetail.setText(detailText);
         }
 
         // show or hide icon
-        if (mIcon < 0) {
-            imgIcon.setVisibility(INVISIBLE);
+        if (iconResId < 0) {
+            imageViewIcon.setVisibility(INVISIBLE);
         } else {
-            imgIcon.setImageResource(mIcon);
+            imageViewIcon.setImageResource(iconResId);
         }
 
         // Load attributes
         final TypedArray typedArray = getContext().obtainStyledAttributes(
                 attrs, R.styleable.EasyPreference, defStyleAttr, 0);
 
-        mDefault = typedArray.getBoolean(R.styleable.EasyPreference_ep_default, mDefault);
+        defaultValue = typedArray.getBoolean(R.styleable.EasyPreference_ep_default, defaultValue);
         typedArray.recycle();
 
         // Save the default value if is not set already.
@@ -80,7 +80,7 @@ public class EasyPreferenceCompoundSwitch extends EasyPreferenceBoolean {
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        mTextViewTittle.setText(mTittle);
-        mSwitch.setChecked(load());
+        textViewTittle.setText(tittle);
+        compoundButton.setChecked(load());
     }
 }

@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.sixthsolution.materialpreferences.EasyDialogFragment;
 import com.sixthsolution.materialpreferences.R;
-import com.sixthsolution.materialpreferences.Showable;
+import com.sixthsolution.materialpreferences.ShowAble;
 import com.sixthsolution.materialpreferences.SingleChoiceListDialog;
 
 
@@ -77,18 +77,18 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
         tvDetail = (TextView) findViewById(R.id.easy_detail);
         imgIcon = (ImageView) findViewById(R.id.easy_icon);
 
-        // show or hide detail
-        if (mDetail == null) {
+        // show or hide detailText
+        if (detailText == null) {
             tvDetail.setVisibility(GONE);
         } else {
-            tvDetail.setText(mDetail);
+            tvDetail.setText(detailText);
         }
 
         // show or hide icon
-        if (mIcon < 0) {
+        if (iconResId < 0) {
             imgIcon.setVisibility(INVISIBLE);
         } else {
-            imgIcon.setImageResource(mIcon);
+            imgIcon.setImageResource(iconResId);
         }
 
 
@@ -98,7 +98,7 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
         }
         // TODO: 2016-01-05 add the generic type to load method's arg .
 
-        mTextViewTittle.setText(mTittle);
+        mTextViewTittle.setText(tittle);
         if (mArrayEntries == null)
             throw new IllegalArgumentException("Entity list is null, set it in preference android:entities:");
         mTextViewSummary.setText(mArrayEntries[load()]);
@@ -109,13 +109,13 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         super.onSharedPreferenceChanged(sharedPreferences, key);
         Log.i(TAG, "onSharedPreferenceChanged() returned: " + key);
-        if (key != null && key.equals(mKey)) {
+        if (key != null && key.equals(this.key)) {
             mTextViewSummary.setText(mArrayEntries[load()]);
         }
     }
 
     @Override
-    protected Showable getDialog() {
+    protected ShowAble getDialog() {
         // TODO: 2016-05-03 use your own builder or bundle ---> DONE
         return SingleChoiceListDialog.newInstance(load(), mArrayEntries, "Single List")
                 .setOnItemSelectedListener(new EasyDialogFragment.OnItemSelectedListener<Integer>() {
@@ -124,18 +124,18 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
                         save(which);
                     }
                 });
-        /*SingleChoiceListDialog mListDialog = new ListDialogBuilder(mArrayEntries, mKey, "Select", load(), "Single list").build();
+        /*SingleChoiceListDialog mListDialog = new ListDialogBuilder(mArrayEntries, key, "Select", load(), "Single list").build();
         mListDialog.show(((AppCompatActivity) getContext()), "someTag");*/
     }
 
     @Override
     public void save(Integer pref) {
-        mSharedPreferences.edit().putInt(mKey, pref).apply();
+        sharedPreferences.edit().putInt(key, pref).apply();
 
     }
 
     @Override
     public Integer load() {
-        return mSharedPreferences.getInt(mKey, mDefault);
+        return sharedPreferences.getInt(key, mDefault);
     }
 }

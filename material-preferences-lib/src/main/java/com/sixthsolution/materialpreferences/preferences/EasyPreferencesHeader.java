@@ -42,13 +42,13 @@ public class EasyPreferencesHeader extends EasyPreference<Void> {
         tvTitle = (TextView) findViewById(R.id.easy_group_title);
         imgIcon = (ImageView) findViewById(R.id.easy_group_icon);
 
-        tvTitle.setText(mTittle);
+        tvTitle.setText(tittle);
 
         // show or hide icon
-        if (mIcon < 0) {
+        if (iconResId < 0) {
             imgIcon.setVisibility(GONE);
         } else {
-            imgIcon.setImageResource(mIcon);
+            imgIcon.setImageResource(iconResId);
         }
     }
 

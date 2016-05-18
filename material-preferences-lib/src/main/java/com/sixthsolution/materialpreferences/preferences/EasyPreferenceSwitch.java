@@ -43,37 +43,37 @@ public class EasyPreferenceSwitch extends EasyPreferenceBoolean {
     protected void init(Context context, AttributeSet attrs, int defStyleAttr) {
         inflate(context, getLayout(), this);
 
-        mSwitch = (SwitchCompat) findViewById(R.id.easy_switch);
+        compoundButton = (SwitchCompat) findViewById(R.id.easy_checkable);
         mTextViewTittle = (TextView) findViewById(R.id.easy_tittle);
         tvDetail = (TextView) findViewById(R.id.easy_detail);
         imgIcon = (ImageView) findViewById(R.id.easy_icon);
 
-        // show or hide detail
-        if (mDetail == null) {
+        // show or hide detailText
+        if (detailText == null) {
             tvDetail.setVisibility(GONE);
         } else {
-            tvDetail.setText(mDetail);
+            tvDetail.setText(detailText);
         }
 
         // show or hide icon
-        if (mIcon < 0) {
+        if (iconResId < 0) {
             imgIcon.setVisibility(INVISIBLE);
         } else {
-            imgIcon.setImageResource(mIcon);
+            imgIcon.setImageResource(iconResId);
         }
 
         // Load attributes
         final TypedArray typedArray = getContext().obtainStyledAttributes(
                 attrs, R.styleable.EasyPreference, defStyleAttr, 0);
 
-        mDefault = typedArray.getBoolean(R.styleable.EasyPreference_ep_default, mDefault);
+        defaultValue = typedArray.getBoolean(R.styleable.EasyPreference_ep_default, defaultValue);
         mOffText = typedArray.getString(R.styleable.EasyPreference_ep_off_text);
         mOnText = typedArray.getString(R.styleable.EasyPreference_ep_on_text);
         typedArray.recycle();
 
-        ((SwitchCompat)mSwitch).setTextOff(mOffText);
-        ((SwitchCompat)mSwitch).setTextOn(mOnText);
-        ((SwitchCompat)mSwitch).setShowText(true);
+        ((SwitchCompat) compoundButton).setTextOff(mOffText);
+        ((SwitchCompat) compoundButton).setTextOn(mOnText);
+        ((SwitchCompat) compoundButton).setShowText(true);
 
         // Save the default value if is not set already.
         if (!isInEditMode()) {
@@ -84,8 +84,8 @@ public class EasyPreferenceSwitch extends EasyPreferenceBoolean {
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        mTextViewTittle.setText(mTittle);
-        mSwitch.setChecked(load());
+        mTextViewTittle.setText(tittle);
+        compoundButton.setChecked(load());
     }
 
 }

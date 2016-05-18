@@ -24,15 +24,13 @@ public abstract class EasyPreference<T> extends RelativeLayout
 
 
     private static final String STATE = "_$state$";
-    protected T mType;
-    protected String mKey;
-    protected String mDependency;
-    protected String mTittle;
-    protected String mSummary;
-    protected String mDetail;
-    protected int mLayoutResId;
-    protected int mIcon;
-    protected SharedPreferences mSharedPreferences;
+    protected String key;
+    protected String dependency;
+    protected String tittle;
+    protected String summary;
+    protected String detailText;
+    protected int iconResId;
+    protected SharedPreferences sharedPreferences;
 
     public abstract int getLayout();
 
@@ -54,22 +52,22 @@ public abstract class EasyPreference<T> extends RelativeLayout
     }
 
     private void init(Context context, AttributeSet attrs, int defStyleAttr) {
-        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
 
         // Load attributes
         final TypedArray typedArray = getContext().obtainStyledAttributes(
                 attrs, R.styleable.EasyPreference, defStyleAttr, 0);
 
-        mKey = typedArray.getString(R.styleable.EasyPreference_ep_key);
-        if (mKey == null) {
+        key = typedArray.getString(R.styleable.EasyPreference_ep_key);
+        if (key == null) {
             throw new RuntimeException("You must set ep_key, it is required");
         }
 
-        mTittle = typedArray.getString(R.styleable.EasyPreference_ep_title);
-        mSummary = typedArray.getString(R.styleable.EasyPreference_ep_summary);
-        mDependency = typedArray.getString(R.styleable.EasyPreference_ep_dependency);
-        mDetail = typedArray.getString(R.styleable.EasyPreference_ep_detail);
-        mIcon = typedArray.getResourceId(R.styleable.EasyPreference_ep_icon, -1);
+        tittle = typedArray.getString(R.styleable.EasyPreference_ep_title);
+        summary = typedArray.getString(R.styleable.EasyPreference_ep_summary);
+        dependency = typedArray.getString(R.styleable.EasyPreference_ep_dependency);
+        detailText = typedArray.getString(R.styleable.EasyPreference_ep_detail);
+        iconResId = typedArray.getResourceId(R.styleable.EasyPreference_ep_icon, -1);
 
         typedArray.recycle();
     }
@@ -77,17 +75,17 @@ public abstract class EasyPreference<T> extends RelativeLayout
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         // if the key is this preference dependency disable/enable child views.
-        if (key.equals(mDependency)) {
+        if (key.equals(dependency)) {
             // TODO: 2016-01-08 Adds cast exception if the dependency is not boolean
-            boolean Dependency = mSharedPreferences.getBoolean(key, false);
-            boolean DependencyState = mSharedPreferences.getBoolean(key + STATE, false);
+            boolean Dependency = this.sharedPreferences.getBoolean(key, false);
+            boolean DependencyState = this.sharedPreferences.getBoolean(key + STATE, false);
             boolean aBoolean = Dependency && DependencyState;
             setChildViewsEnable(this, aBoolean);
         }
-        if (key.equals(mDependency + STATE)) {
+        if (key.equals(dependency + STATE)) {
             // TODO: 2016-01-08 Adds cast exception if the dependency is not boolean
-            boolean Dependency = mSharedPreferences.getBoolean(mDependency, false);
-            boolean DependencyState = mSharedPreferences.getBoolean(key, false);
+            boolean Dependency = this.sharedPreferences.getBoolean(dependency, false);
+            boolean DependencyState = this.sharedPreferences.getBoolean(key, false);
             boolean aBoolean = Dependency && DependencyState;
             setChildViewsEnable(this, aBoolean);
         }
@@ -111,7 +109,7 @@ public abstract class EasyPreference<T> extends RelativeLayout
         // Change the clickable state accordingly
         setClickable(enable);
         if (!isInEditMode())
-            mSharedPreferences.edit().putBoolean(mKey + STATE, enable).apply();
+            sharedPreferences.edit().putBoolean(key + STATE, enable).apply();
 
     }
 
@@ -119,13 +117,13 @@ public abstract class EasyPreference<T> extends RelativeLayout
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        mSharedPreferences.registerOnSharedPreferenceChangeListener(this);
+        sharedPreferences.registerOnSharedPreferenceChangeListener(this);
         setOnClickListener(this);
 
         // So if we have a dependency load it's state and if it was false disable this viewGroup's childViews.
-        if (mDependency != null) {
-            boolean dependency = mSharedPreferences.getBoolean(mDependency, false);
-            boolean dependencyState = mSharedPreferences.getBoolean(mDependency + STATE, false);
+        if (dependency != null) {
+            boolean dependency = sharedPreferences.getBoolean(this.dependency, false);
+            boolean dependencyState = sharedPreferences.getBoolean(this.dependency + STATE, false);
             boolean aBoolean = dependency && dependencyState;
             setChildViewsEnable(this, aBoolean);
         } else {
@@ -137,7 +135,7 @@ public abstract class EasyPreference<T> extends RelativeLayout
     @Override
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        mSharedPreferences.unregisterOnSharedPreferenceChangeListener(this);
+        sharedPreferences.unregisterOnSharedPreferenceChangeListener(this);
         setOnClickListener(null);
     }
 }

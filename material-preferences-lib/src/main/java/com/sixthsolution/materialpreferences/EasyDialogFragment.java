@@ -10,7 +10,7 @@ import android.support.v7.app.AppCompatDialogFragment;
  *
  * Its the base class for showing a dialog to user, it is not responsible for any save or load data
  */
-public abstract class EasyDialogFragment<T> extends AppCompatDialogFragment implements Showable {
+public abstract class EasyDialogFragment<T> extends AppCompatDialogFragment implements ShowAble {
 
 
     public interface OnItemSelectedListener<I> {

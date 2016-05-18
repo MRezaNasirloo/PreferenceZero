@@ -10,8 +10,8 @@ import android.widget.CompoundButton;
  *         Created on: 2016-01-06
  */
 public abstract class EasyPreferenceBoolean extends EasyPreference<Boolean> {
-    protected CompoundButton mSwitch;
-    protected boolean mDefault = true;
+    protected CompoundButton compoundButton;
+    protected boolean defaultValue = true;
 
     public EasyPreferenceBoolean(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
@@ -30,17 +30,17 @@ public abstract class EasyPreferenceBoolean extends EasyPreference<Boolean> {
     @Override
     public void onClick(View v) {
         boolean checked = !load();
-        mSwitch.setChecked(checked);
+        compoundButton.setChecked(checked);
         save(checked);
     }
 
     @Override
     public void save(Boolean pref) {
-        mSharedPreferences.edit().putBoolean(mKey, pref).apply();
+        sharedPreferences.edit().putBoolean(key, pref).apply();
     }
 
     @Override
     public Boolean load() {
-        return mSharedPreferences.getBoolean(mKey, mDefault);
+        return sharedPreferences.getBoolean(key, defaultValue);
     }
 }

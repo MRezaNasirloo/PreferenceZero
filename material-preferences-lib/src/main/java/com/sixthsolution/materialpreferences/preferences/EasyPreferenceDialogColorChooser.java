@@ -18,7 +18,7 @@ import android.widget.TextView;
 public class EasyPreferenceDialogColorChooser {
 /* extends EasyPreferenceDialog<Integer> {
 
-    protected int mDefault;
+    protected int defaultValue;
     protected TextView mTextViewTittle;
     private CircleView mFAB;
 
@@ -44,7 +44,7 @@ public class EasyPreferenceDialogColorChooser {
                 attrs, R.styleable.EasyPreference, defStyleAttr, 0);
         try {
 
-            mDefault = Integer.parseInt(typedArray.getString(R.styleable.EasyPreference_ep_default));
+            defaultValue = Integer.parseInt(typedArray.getString(R.styleable.EasyPreference_ep_default));
 
 
         } catch (NumberFormatException e) {
@@ -67,7 +67,7 @@ public class EasyPreferenceDialogColorChooser {
         }
         // TODO: 2016-01-05 add the generic type to load method's arg .
 
-        mTextViewTittle.setText(mTittle);
+        mTextViewTittle.setText(tittle);
         mFAB.setColor(load);
     }
 
@@ -76,7 +76,7 @@ public class EasyPreferenceDialogColorChooser {
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         super.onSharedPreferenceChanged(sharedPreferences, key);
         Logger.t("onSharedPreference").d("onSharedPreferenceChanged() returned: " + key);
-        if (key != null && key.equals(mKey)) {
+        if (key != null && key.equals(key)) {
             Integer load = load();
             mFAB.setColor(load);
         }
@@ -102,12 +102,12 @@ public class EasyPreferenceDialogColorChooser {
 
     @Override
     public void save(Integer pref) {
-        mSharedPreferences.edit().putInt(mKey, pref).apply();
+        sharedPreferences.edit().putInt(key, pref).apply();
 
     }
 
     @Override
     public Integer load() {
-        return mSharedPreferences.getInt(mKey, mDefault);
+        return sharedPreferences.getInt(key, defaultValue);
     }*/
 }

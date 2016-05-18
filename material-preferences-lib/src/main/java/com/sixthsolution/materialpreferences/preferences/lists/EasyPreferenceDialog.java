@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.sixthsolution.materialpreferences.Showable;
+import com.sixthsolution.materialpreferences.ShowAble;
 import com.sixthsolution.materialpreferences.preferences.EasyPreference;
 
 /**
@@ -45,5 +45,5 @@ public abstract class EasyPreferenceDialog<T> extends EasyPreference<T> {
      *
      * @return Dialog
      */
-    protected abstract Showable getDialog();
+    protected abstract ShowAble getDialog();
 }
