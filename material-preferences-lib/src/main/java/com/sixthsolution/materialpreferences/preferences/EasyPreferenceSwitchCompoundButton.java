@@ -12,7 +12,8 @@ import com.sixthsolution.materialpreferences.R;
 /**
  * @author : Pedramrn@gmail.com Created on: 2016-01-05
  */
-public abstract class EasyPreferenceSwitchCompoundButton extends EasyPreferenceBoolean {
+public abstract class EasyPreferenceSwitchCompoundButton extends EasyPreferenceBoolean implements
+        CompoundButton.OnCheckedChangeListener {
 
     protected TextView textViewTittle;
     protected TextView textViewDetail;
@@ -38,16 +39,10 @@ public abstract class EasyPreferenceSwitchCompoundButton extends EasyPreferenceB
         inflate(context, getLayout(), this);
 
         compoundButton = (CompoundButton) findViewById(R.id.easy_checkable);
+        compoundButton.setOnCheckedChangeListener(this);
         textViewTittle = (TextView) findViewById(R.id.easy_tittle);
         textViewDetail = (TextView) findViewById(R.id.easy_detail);
         imageViewIcon = (ImageView) findViewById(R.id.easy_icon);
-
-        // show or hide detailText
-        if (detailTextON == null) {
-            textViewDetail.setVisibility(GONE);
-        } else {
-            textViewDetail.setText(detailTextON);
-        }
 
         // show or hide icon
         if (iconResId < 0) {
@@ -76,5 +71,18 @@ public abstract class EasyPreferenceSwitchCompoundButton extends EasyPreferenceB
         super.onAttachedToWindow();
         textViewTittle.setText(tittle);
         compoundButton.setChecked(load());
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton button, boolean value) {
+        if (detailTextON != null && value) {
+            textViewDetail.setVisibility(VISIBLE);
+            textViewDetail.setText(detailTextON);
+        } else if (detailTextOFF != null && !value) {
+            textViewDetail.setVisibility(VISIBLE);
+            textViewDetail.setText(detailTextOFF);
+        } else {
+            textViewDetail.setVisibility(GONE);
+        }
     }
 }

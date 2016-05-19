@@ -83,6 +83,8 @@
             app:ep_title="@string/clock_format"
             app:ep_default="true"
             app:ep_key="pref_clock_format"
+            app:ep_detail_on="show time like 1pm"
+            app:ep_detail_off="show time like 13"
             />
 
         <com.sixthsolution.materialpreferences.preferences.EasyPreferencesHeader
