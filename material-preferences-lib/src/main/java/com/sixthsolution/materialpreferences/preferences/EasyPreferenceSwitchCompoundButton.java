@@ -46,7 +46,7 @@ public abstract class EasyPreferenceSwitchCompoundButton extends EasyPreferenceB
 
         // show or hide icon
         if (iconResId < 0) {
-            imageViewIcon.setVisibility(INVISIBLE);
+            imageViewIcon.setVisibility(GONE);
         } else {
             imageViewIcon.setImageResource(iconResId);
         }
@@ -82,7 +82,7 @@ public abstract class EasyPreferenceSwitchCompoundButton extends EasyPreferenceB
             textViewDetail.setVisibility(VISIBLE);
             textViewDetail.setText(detailTextOFF);
         } else {
-            textViewDetail.setVisibility(GONE);
+            textViewDetail.setVisibility(INVISIBLE);
         }
     }
 }

@@ -7,10 +7,10 @@
 
     <ImageView
         android:id="@+id/easy_group_icon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/easy_icon_size"
+        android:layout_height="@dimen/easy_icon_size"
         android:src="@drawable/default_icon"
-        android:tint="@color/blue"
+        android:tint="?attr/colorPrimary"
         />
 
     <TextView
@@ -20,7 +20,7 @@
         android:text="group title"
         android:gravity="start"
         style="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/blue"
+        android:textColor="?attr/colorPrimary"
         android:layout_marginLeft="12dp"
         />
 

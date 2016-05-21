@@ -33,6 +33,7 @@
         style="@style/TextAppearance.AppCompat.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
         android:layout_centerVertical="true"
         android:layout_toEndOf="@id/easy_icon"
         android:layout_toLeftOf="@id/easy_checkable"
@@ -49,9 +50,11 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/easy_tittle"
         android:layout_alignStart="@id/easy_tittle"
-        android:layout_below="@id/easy_icon"
+        android:layout_below="@id/easy_tittle"
+        android:layout_marginTop="@dimen/default_margin"
         android:gravity="start"
         android:text="detail"
+        android:visibility="invisible"
         />
 
 </RelativeLayout>

@@ -16,6 +16,7 @@
         android:layout_centerVertical="true"
         android:layout_margin="@dimen/default_margin"
         android:src="@mipmap/ic_launcher"
+        android:visibility="visible"
         />
 
     <TextView
@@ -23,8 +24,10 @@
         style="@style/TextAppearance.AppCompat.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
         android:layout_centerVertical="true"
         android:layout_toEndOf="@id/easy_icon"
+        android:layout_toRightOf="@id/easy_icon"
         android:gravity="start"
         android:text="password status"
         />
@@ -36,18 +39,20 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/easy_tittle"
         android:layout_alignStart="@id/easy_tittle"
-        android:layout_below="@id/easy_icon"
+        android:layout_below="@id/easy_tittle"
+        android:layout_marginTop="@dimen/default_margin"
         android:gravity="start"
         android:text="detail"
+        android:visibility="invisible"
         />
 
     <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/easy_checkable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/easy_checkable"
-        android:layout_above="@+id/easy_detail"
-        android:layout_alignRight="@+id/easy_detail"
-        android:layout_alignEnd="@+id/easy_detail"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
         android:clickable="false"
         android:focusable="false"
         />

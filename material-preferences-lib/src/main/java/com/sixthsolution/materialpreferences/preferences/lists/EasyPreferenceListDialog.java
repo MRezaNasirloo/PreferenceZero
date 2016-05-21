@@ -76,14 +76,15 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
 
         // show or hide detailText
         if (detailTextON == null) {
-            tvDetail.setVisibility(GONE);
+            tvDetail.setVisibility(INVISIBLE);
         } else {
+            tvDetail.setVisibility(VISIBLE);
             tvDetail.setText(detailTextON);
         }
 
         // show or hide icon
         if (iconResId < 0) {
-            imgIcon.setVisibility(INVISIBLE);
+            imgIcon.setVisibility(GONE);
         } else {
             imgIcon.setImageResource(iconResId);
         }
