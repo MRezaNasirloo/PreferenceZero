@@ -72,6 +72,13 @@ public abstract class EasyPreference<T> extends RelativeLayout
         iconResId = typedArray.getResourceId(R.styleable.EasyPreference_ep_icon, -1);
 
         typedArray.recycle();
+
+        // Enable selectable background
+        int[] androidAttrs = new int[]{R.attr.selectableItemBackground};
+        final TypedArray typedArrayBackground = context.obtainStyledAttributes(androidAttrs);
+        int backgroundResource = typedArrayBackground.getResourceId(0, 0);
+        setBackgroundResource(backgroundResource);
+        typedArrayBackground.recycle();
     }
 
     @Override
