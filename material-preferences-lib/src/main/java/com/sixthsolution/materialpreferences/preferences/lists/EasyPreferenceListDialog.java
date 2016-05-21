@@ -57,12 +57,9 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
         final TypedArray typedArray = context.obtainStyledAttributes(
                 attrs, R.styleable.EasyPreference, defStyleAttr, 0);
         try {
-
             mArrayEntries = typedArray.getTextArray(R.styleable.EasyPreference_android_entries);
             mArrayValues = typedArray.getTextArray(R.styleable.EasyPreference_android_entryValues);
             mDefault = Integer.parseInt(typedArray.getString(R.styleable.EasyPreference_ep_default));
-
-
         } catch (NumberFormatException e) {
             e.printStackTrace();
             throw new NumberFormatException("Cant use this this value as integer." + e.getMessage());
@@ -117,7 +114,7 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
     @Override
     protected ShowAble getDialog() {
         // TODO: 2016-05-03 use your own builder or bundle ---> DONE
-        return SingleChoiceListDialog.newInstance(load(), mArrayEntries, "Single List")
+        return SingleChoiceListDialog.newInstance(load(), mArrayEntries, tittle)
                 .setOnItemSelectedListener(new EasyDialogFragment.OnItemSelectedListener<Integer>() {
                     @Override
                     public void OnItemSelected(Integer which) {

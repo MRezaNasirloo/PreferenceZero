@@ -9,6 +9,7 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 //import com.hannesdorfmann.fragmentargs.annotation.Arg;
 //import com.hannesdorfmann.fragmentargs.annotation.FragmentWithArgs;
@@ -17,6 +18,7 @@ import android.view.ViewGroup;
  * @author : Pedramrn@gmail.com Created on: 2016-01-07
  */
 public class SingleChoiceListDialog extends EasyDialogFragment<Integer> {
+    private TextView tvHeaderTitle;
 
     public SingleChoiceListDialog() {
         // Required empty public constructor
@@ -43,7 +45,7 @@ public class SingleChoiceListDialog extends EasyDialogFragment<Integer> {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            tittle = getArguments().getString(tittle);
+            tittle = getArguments().getString(TITTLE);
             selectedItem = getArguments().getInt(SELECTED_ITEMs, 0);
             arrayEntries = getArguments().getCharSequenceArray(ARRAY_ENTRIES);
         }
@@ -54,6 +56,10 @@ public class SingleChoiceListDialog extends EasyDialogFragment<Integer> {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         View header = inflateLayout();
+
+        tvHeaderTitle = (TextView) header.findViewById(R.id.header_title);
+        tvHeaderTitle.setText(tittle);
+
         return new AlertDialog.Builder(getContext())
                 .setSingleChoiceItems(arrayEntries,
                         selectedItem, new DialogInterface.OnClickListener() {
