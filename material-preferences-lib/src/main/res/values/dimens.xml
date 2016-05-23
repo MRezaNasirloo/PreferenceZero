@@ -3,4 +3,7 @@
     <dimen name="easy_icon_size">24dp</dimen>
     <dimen name="default_margin">12dp</dimen>
     <dimen name="easy_padding">8dp</dimen>
+    <dimen name="layout_min_height">48dp</dimen>
+    <dimen name="layout_max_height">64dp</dimen>
+    <dimen name="mini_margin">4dp</dimen>
 </resources>

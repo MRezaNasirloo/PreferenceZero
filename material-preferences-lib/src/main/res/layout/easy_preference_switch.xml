@@ -7,6 +7,7 @@
     android:padding="@dimen/easy_padding"
     android:orientation="horizontal"
     android:gravity="center_vertical"
+    android:minHeight="@dimen/layout_min_height"
     >
 
     <ImageView
@@ -23,6 +24,7 @@
         android:layout_weight="1"
         android:gravity="center_vertical"
         android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
         >
 
         <TextView
@@ -39,7 +41,7 @@
             style="@style/TextAppearance.AppCompat.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/easy_padding"
+            android:layout_marginTop="@dimen/mini_margin"
             android:gravity="start"
             android:text="detail"
             android:visibility="gone"

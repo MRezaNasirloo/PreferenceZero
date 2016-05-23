@@ -38,6 +38,8 @@
         android:layout_centerVertical="true"
         style="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
         />
 
 </RelativeLayout>

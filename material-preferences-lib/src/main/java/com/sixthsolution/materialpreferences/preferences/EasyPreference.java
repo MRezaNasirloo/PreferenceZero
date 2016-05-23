@@ -15,12 +15,13 @@ import com.sixthsolution.materialpreferences.R;
 
 /**
  * @author : Pedramrn@gmail.com Created on: 2016-01-05
- *         <p/>
+ *         <p>
  *         A replacement for android {@link Preference} class. This the base class for
  *         EasyPreference.
  */
 public abstract class EasyPreference<T> extends RelativeLayout
-        implements SharedPreferences.OnSharedPreferenceChangeListener, View.OnClickListener, PersistPref<T> {
+        implements SharedPreferences.OnSharedPreferenceChangeListener, View.OnClickListener,
+        PersistPref<T> {
 
 
     private static final String STATE = "_$state$";
@@ -74,7 +75,7 @@ public abstract class EasyPreference<T> extends RelativeLayout
         typedArray.recycle();
 
         // Enable selectable background
-        int[] androidAttrs = new int[]{R.attr.selectableItemBackground};
+        int[] androidAttrs = new int[] {R.attr.selectableItemBackground};
         final TypedArray typedArrayBackground = context.obtainStyledAttributes(androidAttrs);
         int backgroundResource = typedArrayBackground.getResourceId(0, 0);
         setBackgroundResource(backgroundResource);
@@ -110,15 +111,17 @@ public abstract class EasyPreference<T> extends RelativeLayout
         int childCount = viewGroup.getChildCount();
         for (int i = 0; i < childCount; i++) {
             View childAt = viewGroup.getChildAt(i);
-            if (childAt instanceof ViewGroup)
+            if (childAt instanceof ViewGroup) {
                 setChildViewsEnable(((ViewGroup) childAt), enable);
+            }
             childAt.setEnabled(enable);
         }
 
         // Change the clickable state accordingly
         setClickable(enable);
-        if (!isInEditMode())
+        if (!isInEditMode()) {
             sharedPreferences.edit().putBoolean(key + STATE, enable).apply();
+        }
 
     }
 
@@ -146,5 +149,13 @@ public abstract class EasyPreference<T> extends RelativeLayout
         super.onDetachedFromWindow();
         sharedPreferences.unregisterOnSharedPreferenceChangeListener(this);
         setOnClickListener(null);
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        heightMeasureSpec = MeasureSpec.makeMeasureSpec(
+                getResources().getDimensionPixelSize(R.dimen.layout_max_height),
+                MeasureSpec.AT_MOST);
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 }
