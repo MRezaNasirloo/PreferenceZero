@@ -82,7 +82,7 @@ public abstract class EasyPreferenceSwitchCompoundButton extends EasyPreferenceB
             textViewDetail.setVisibility(VISIBLE);
             textViewDetail.setText(detailTextOFF);
         } else {
-            textViewDetail.setVisibility(INVISIBLE);
+            textViewDetail.setVisibility(GONE);
         }
     }
 }

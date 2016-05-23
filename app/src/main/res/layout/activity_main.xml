@@ -5,10 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_marginTop="@dimen/default_margin"
     tools:context="com.sixthsolution.materialpreferencesdemo.MainActivity"
     >
 
@@ -30,9 +27,8 @@
             android:id="@+id/preferences_auto_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
             app:ep_default="false"
-            app:ep_icon="@android:drawable/ic_delete"
+            app:ep_icon="@drawable/default_icon"
             app:ep_key="pref_auto_location"
             app:ep_title="@string/auto_location"
             />
@@ -41,7 +37,6 @@
             android:id="@+id/preferences_auto_update"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
             app:ep_default="false"
             app:ep_detail_on="Automatic Update"
             app:ep_key="pref_auto_update"
@@ -51,7 +46,6 @@
         <com.sixthsolution.materialpreferences.preferences.EasyPreferencesHeader
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
             app:ep_icon="@drawable/default_icon"
             app:ep_key="pref_header"
             app:ep_title="@string/clock_date_setting"
@@ -61,20 +55,18 @@
             android:id="@+id/preferences_choose_language"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:entries="@array/pref_language_list_entries"
             android:entryValues="@array/pref_language_list_value"
             app:ep_default="1"
+            app:ep_detail_on="change interface language"
             app:ep_key="pref_choose_language"
             app:ep_title="@string/language"
-            app:ep_detail_on="change interface language"
             />
 
         <com.sixthsolution.materialpreferences.preferences.lists.EasyPreferenceListDialog
             android:id="@+id/preferences_choose_date_format"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:entries="@array/pref_date_format_list_entries"
             android:entryValues="@array/pref_date_format_list_value"
             app:ep_default="1"
@@ -86,7 +78,6 @@
             android:id="@+id/preferences_clock_format"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
             app:ep_default="true"
             app:ep_detail_off="show time like 13"
             app:ep_detail_on="show time like 1pm"
@@ -100,14 +91,12 @@
             app:ep_icon="@drawable/default_icon"
             app:ep_key="pref_header"
             app:ep_title="@string/weather_settings"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
             />
 
         <com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitch
             android:id="@+id/preferences_feel_temp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
             app:ep_default="true"
             app:ep_detail_on="Real temp may be 24 but it feels like 18"
             app:ep_key="pref_feel_temp"
@@ -119,7 +108,6 @@
             android:id="@+id/preferences_choose_weather_provider"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:entries="@array/pref_weather_provider_list_entries"
             android:entryValues="@array/pref_weather_provider_list_value"
             app:ep_default="1"
@@ -131,7 +119,6 @@
             android:id="@+id/preferences_choose_radar_provider"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:entries="@array/pref_radar_provider_list_entries"
             android:entryValues="@array/pref_radar_provider_list_value"
             app:ep_default="1"
@@ -143,12 +130,10 @@
             android:id="@+id/preferences_measurement_unit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
             app:ep_default="true"
             app:ep_key="pref_measurement_unit"
             app:ep_title="@string/measurement_unit"
             />
-
 
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

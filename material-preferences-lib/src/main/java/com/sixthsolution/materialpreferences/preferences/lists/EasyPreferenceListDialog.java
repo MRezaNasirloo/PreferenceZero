@@ -76,7 +76,7 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
 
         // show or hide detailText
         if (detailTextON == null) {
-            tvDetail.setVisibility(INVISIBLE);
+            tvDetail.setVisibility(GONE);
         } else {
             tvDetail.setVisibility(VISIBLE);
             tvDetail.setText(detailTextON);
