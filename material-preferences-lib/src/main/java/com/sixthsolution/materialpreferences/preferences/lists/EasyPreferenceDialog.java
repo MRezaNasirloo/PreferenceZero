@@ -2,6 +2,7 @@ package com.sixthsolution.materialpreferences.preferences.lists;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.view.View;
@@ -36,7 +37,7 @@ public abstract class EasyPreferenceDialog<T> extends EasyPreference<T> {
     /**
      * show A dialog to show in onClick
      */
-    protected void show() {
+    private void show() {
         getDialog().show((AppCompatActivity) getContext());
     }
 
@@ -45,5 +46,6 @@ public abstract class EasyPreferenceDialog<T> extends EasyPreference<T> {
      *
      * @return Dialog
      */
+    @NonNull
     protected abstract ShowAble getDialog();
 }

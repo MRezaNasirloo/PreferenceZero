@@ -3,6 +3,7 @@ package com.sixthsolution.materialpreferences.preferences.lists;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
+import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -112,6 +113,7 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
         }
     }
 
+    @NonNull
     @Override
     protected ShowAble getDialog() {
         // TODO: 2016-05-03 use your own builder or bundle ---> DONE

@@ -3,6 +3,7 @@ package com.sixthsolution.materialpreferences.preferences;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
+import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
@@ -13,10 +14,6 @@ import com.sixthsolution.materialpreferences.ShowAble;
 import com.sixthsolution.materialpreferences.preferences.lists.EasyPreferenceDialog;
 
 import petrov.kristiyan.colorpicker.ColorPicker;
-
-//import com.afollestad.materialdialogs.color.ColorChooserDialog;
-//import com.orhanobut.logger.Logger;
-//import com.sixthsolution.tosanbanking.app.ui.main.activity.SettingsActivity;
 
 /**
  * @author : Pedramrn@gmail.com Created on: 2016-01-06
@@ -85,7 +82,7 @@ public class EasyPreferenceDialogColorChooser extends EasyPreferenceDialog<Integ
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         super.onSharedPreferenceChanged(sharedPreferences, key);
-        if (key != null && key.equals(key)) {
+        if (key != null && this.key.equals(key)) {
             Integer load = load();
             mFAB.setColor(load);
         }
@@ -116,6 +113,7 @@ public class EasyPreferenceDialogColorChooser extends EasyPreferenceDialog<Integ
 
     }
 
+    @NonNull
     @Override
     protected ShowAble getDialog() {
         return null;
