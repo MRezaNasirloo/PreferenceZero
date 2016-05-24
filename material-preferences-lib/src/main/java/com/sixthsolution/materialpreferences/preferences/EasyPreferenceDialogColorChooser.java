@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
@@ -88,35 +89,29 @@ public class EasyPreferenceDialogColorChooser extends EasyPreferenceDialog<Integ
         }
     }
 
-    @Override
-    public void onClick(View v) {
-        show();
-    }
-
-    @Override
-    protected void show() {
-        ColorPicker colorPicker = new ColorPicker(getContext());
-        colorPicker.setColors(R.array.demo_colors);
-        colorPicker.setTitle(tittle);
-        colorPicker.setTitlePadding(5, 5, 5, 5);
-        colorPicker.setColorButtonSize(60, 60);
-        colorPicker.setColorButtonMargin(10, 10, 10, 10);
-        colorPicker.setRoundColorButton(true);
-        colorPicker.setDefaultColorButton(load());
-        colorPicker.setOnFastChooseColorListener(new ColorPicker.OnFastChooseColorListener() {
-            @Override
-            public void setOnFastChooseColorListener(int position, int color) {
-                save(color);
-            }
-        });
-        colorPicker.show();
-
-    }
-
     @NonNull
     @Override
     protected ShowAble getDialog() {
-        return null;
+        return new ShowAble() {
+            @Override
+            public void show(AppCompatActivity activity) {
+                ColorPicker colorPicker = new ColorPicker(getContext());
+                colorPicker.setColors(R.array.demo_colors);
+                colorPicker.setTitle(tittle);
+                colorPicker.setTitlePadding(5, 5, 5, 5);
+                colorPicker.setColorButtonSize(60, 60);
+                colorPicker.setColorButtonMargin(10, 10, 10, 10);
+                colorPicker.setRoundColorButton(true);
+                colorPicker.setDefaultColorButton(load());
+                colorPicker.setOnFastChooseColorListener(new ColorPicker.OnFastChooseColorListener() {
+                    @Override
+                    public void setOnFastChooseColorListener(int position, int color) {
+                        save(color);
+                    }
+                });
+                colorPicker.show();
+            }
+        };
     }
 
     @Override
