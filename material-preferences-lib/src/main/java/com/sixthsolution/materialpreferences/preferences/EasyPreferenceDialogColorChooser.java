@@ -7,6 +7,13 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
 
+import com.sixthsolution.materialpreferences.CircleView;
+import com.sixthsolution.materialpreferences.R;
+import com.sixthsolution.materialpreferences.ShowAble;
+import com.sixthsolution.materialpreferences.preferences.lists.EasyPreferenceDialog;
+
+import petrov.kristiyan.colorpicker.ColorPicker;
+
 //import com.afollestad.materialdialogs.color.ColorChooserDialog;
 //import com.orhanobut.logger.Logger;
 //import com.sixthsolution.tosanbanking.app.ui.main.activity.SettingsActivity;
@@ -15,12 +22,16 @@ import android.widget.TextView;
  * @author : Pedramrn@gmail.com Created on: 2016-01-06
  */
 // TODO: 2016-05-03 extracts this to it's own modules as it depends on Martial Dialog library
-public class EasyPreferenceDialogColorChooser {
-/* extends EasyPreferenceDialog<Integer> {
+public class EasyPreferenceDialogColorChooser extends EasyPreferenceDialog<Integer> {
 
     protected int defaultValue;
     protected TextView mTextViewTittle;
     private CircleView mFAB;
+
+    @Override
+    protected int getLayout() {
+        return R.layout.easy_preference_dialog_color_chooser;
+    }
 
     public EasyPreferenceDialogColorChooser(Context context) {
         super(context);
@@ -43,18 +54,17 @@ public class EasyPreferenceDialogColorChooser {
         final TypedArray typedArray = context.obtainStyledAttributes(
                 attrs, R.styleable.EasyPreference, defStyleAttr, 0);
         try {
-
-            defaultValue = Integer.parseInt(typedArray.getString(R.styleable.EasyPreference_ep_default));
-
-
+            defaultValue =
+                    Integer.parseInt(typedArray.getString(R.styleable.EasyPreference_ep_default));
         } catch (NumberFormatException e) {
             e.printStackTrace();
-            throw new NumberFormatException("Cant use this this value as integer." + e.getMessage());
+            throw new NumberFormatException(
+                    "Cant use this this value as integer." + e.getMessage());
         } finally {
             typedArray.recycle();
         }
 
-        inflate(context, R.layout.easy_preference_dialog_color_chooser, this);
+        inflate(context, getLayout(), this);
 
         mFAB = (CircleView) findViewById(R.id.easy_color_preview);
         mTextViewTittle = (TextView) findViewById(R.id.easy_tittle);
@@ -75,7 +85,6 @@ public class EasyPreferenceDialogColorChooser {
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         super.onSharedPreferenceChanged(sharedPreferences, key);
-        Logger.t("onSharedPreference").d("onSharedPreferenceChanged() returned: " + key);
         if (key != null && key.equals(key)) {
             Integer load = load();
             mFAB.setColor(load);
@@ -89,15 +98,27 @@ public class EasyPreferenceDialogColorChooser {
 
     @Override
     protected void show() {
-        new ColorChooserDialog.Builder(((SettingsActivity) getContext()), R.string.color_picker)
-                .titleSub(R.string.color_picker_level)
-                .presetsButton(R.string.color_picker_back)
-                .cancelButton(R.string.color_picker_back)
-                .doneButton(R.string.color_picker_select)
-                .backButton(R.string.color_picker_back)
-                .customButton(R.string.color_picker_custom)
-                .allowUserColorInput(false)
-                .show();
+        ColorPicker colorPicker = new ColorPicker(getContext());
+        colorPicker.setColors(R.array.demo_colors);
+        colorPicker.setTitle(tittle);
+        colorPicker.setTitlePadding(5, 5, 5, 5);
+        colorPicker.setColorButtonSize(60, 60);
+        colorPicker.setColorButtonMargin(10, 10, 10, 10);
+        colorPicker.setRoundColorButton(true);
+        colorPicker.setDefaultColorButton(load());
+        colorPicker.setOnFastChooseColorListener(new ColorPicker.OnFastChooseColorListener() {
+            @Override
+            public void setOnFastChooseColorListener(int position, int color) {
+                save(color);
+            }
+        });
+        colorPicker.show();
+
+    }
+
+    @Override
+    protected ShowAble getDialog() {
+        return null;
     }
 
     @Override
@@ -109,5 +130,5 @@ public class EasyPreferenceDialogColorChooser {
     @Override
     public Integer load() {
         return sharedPreferences.getInt(key, defaultValue);
-    }*/
+    }
 }

@@ -135,5 +135,15 @@
             app:ep_title="@string/measurement_unit"
             />
 
+        <com.sixthsolution.materialpreferences.preferences.EasyPreferenceDialogColorChooser
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ep_key="pref_color_chooser"
+            app:ep_title="@string/theme_color"
+            app:ep_default="1"
+            >
+
+        </com.sixthsolution.materialpreferences.preferences.EasyPreferenceDialogColorChooser>
+
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

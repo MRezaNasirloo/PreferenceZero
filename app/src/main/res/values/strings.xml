@@ -72,4 +72,6 @@
 
     <string name="measurement_unit">Measurement Units</string>
 
+    <string name="theme_color">Theme Color</string>
+
 </resources>
