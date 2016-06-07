@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 23
@@ -16,6 +17,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -28,4 +32,16 @@ dependencies {
         exclude module: 'appcompat-v7'
         exclude module: 'recyclerview-v7'
     }
+}
+
+publish {
+    userOrg = '6thsolution'
+    groupId = 'com.sixthsolution.material'
+    uploadName = 'preferences'
+    repoName = 'public-maven'
+    artifactId = 'preferences'
+    publishVersion = '1.0.0-beta1'
+    desc = 'Painless customizable preference views'
+    website = 'https://gitlab.com/6thsolution/material-preferences'
+    repository = 'https://gitlab.com/6thsolution/material-preferences.git'
 }
