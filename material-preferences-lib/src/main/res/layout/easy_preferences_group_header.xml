@@ -1,32 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
-    android:padding="@dimen/easy_padding"
+    android:orientation="vertical"
     >
 
-    <ImageView
-        android:id="@+id/easy_group_icon"
-        android:layout_width="@dimen/easy_icon_size"
-        android:layout_height="@dimen/easy_icon_size"
-        android:src="@drawable/default_icon"
-        android:tint="?attr/colorPrimary"
-        />
-
-    <TextView
-        android:id="@+id/easy_group_title"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="group title"
-        android:gravity="start"
-        style="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="?attr/colorPrimary"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        />
+        android:orientation="horizontal"
+        android:padding="@dimen/easy_padding"
+        >
+
+        <ImageView
+            android:id="@+id/easy_group_icon"
+            android:layout_width="@dimen/easy_icon_size"
+            android:layout_height="@dimen/easy_icon_size"
+            android:src="@drawable/default_icon"
+            android:tint="?attr/colorPrimary"
+            />
+
+        <TextView
+            android:id="@+id/easy_group_title"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:gravity="start"
+            android:text="group title"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/category_root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    </LinearLayout>
 
 </LinearLayout>
+</merge>
