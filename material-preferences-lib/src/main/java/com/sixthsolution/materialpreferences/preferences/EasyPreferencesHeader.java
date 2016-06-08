@@ -45,6 +45,7 @@ public class EasyPreferencesHeader extends CardView {
 
     protected void init(Context context, AttributeSet attrs, int defStyleAttr) {
         inflate(context, getLayout(), this);
+        setRadius(0);
 
         rootLayout = (LinearLayout) findViewById(R.id.category_root_layout);
         tvTitle = (TextView) findViewById(R.id.easy_group_title);
