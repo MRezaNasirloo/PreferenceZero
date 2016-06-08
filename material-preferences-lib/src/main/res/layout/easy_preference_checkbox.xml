@@ -30,10 +30,9 @@
 
         <TextView
             android:id="@+id/easy_tittle"
-            style="@style/TextAppearance.AppCompat.Medium"
+            style="@style/TitleStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="start"
             android:text="password status"
             />
 

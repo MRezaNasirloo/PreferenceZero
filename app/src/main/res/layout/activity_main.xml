@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:ep_key="pref_seek_bar"
-                app:ep_title="brightness"
+                app:ep_title="Brightness"
                 app:ep_min_value="5"
                 app:ep_max_value="15"
                 />
