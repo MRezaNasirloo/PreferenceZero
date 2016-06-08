@@ -151,11 +151,11 @@ public abstract class EasyPreference<T> extends RelativeLayout
         setOnClickListener(null);
     }
 
-    @Override
+    /*@Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         heightMeasureSpec = MeasureSpec.makeMeasureSpec(
                 getResources().getDimensionPixelSize(R.dimen.layout_max_height),
                 MeasureSpec.AT_MOST);
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-    }
+    }*/
 }

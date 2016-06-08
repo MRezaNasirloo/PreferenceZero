@@ -16,6 +16,9 @@
         <attr name="ep_icon" format="reference"/>
         <attr name="ep_detail_on" format="string"/>
         <attr name="ep_detail_off" format="string"/>
+        <attr name="ep_min_value" format="integer"/>
+        <attr name="ep_max_value" format="integer"/>
+        <attr name="ep_show_value" format="boolean"/>
         <attr name="android:entries"/>
         <attr name="android:entryValues"/>
     </declare-styleable>
