@@ -19,7 +19,6 @@ import petrov.kristiyan.colorpicker.ColorPicker;
 /**
  * @author : Pedramrn@gmail.com Created on: 2016-01-06
  */
-// TODO: 2016-05-03 extracts this to it's own modules as it depends on Martial Dialog library
 public class EasyPreferenceDialogColorChooser extends EasyPreferenceDialog<Integer> {
 
     protected int defaultValue;
@@ -98,9 +97,6 @@ public class EasyPreferenceDialogColorChooser extends EasyPreferenceDialog<Integ
                 ColorPicker colorPicker = new ColorPicker(getContext());
                 colorPicker.setColors(R.array.demo_colors);
                 colorPicker.setTitle(tittle);
-                colorPicker.setTitlePadding(5, 5, 5, 5);
-                colorPicker.setColorButtonSize(60, 60);
-                colorPicker.setColorButtonMargin(10, 10, 10, 10);
                 colorPicker.setRoundColorButton(true);
                 colorPicker.setDefaultColorButton(load());
                 colorPicker.setOnFastChooseColorListener(new ColorPicker.OnFastChooseColorListener() {
