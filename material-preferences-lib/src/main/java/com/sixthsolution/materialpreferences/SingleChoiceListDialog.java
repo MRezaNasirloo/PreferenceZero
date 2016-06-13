@@ -55,9 +55,9 @@ public class SingleChoiceListDialog extends EasyDialogFragment<Integer> {
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        View header = inflateLayout();
+//        View header = inflateLayout();
 
-        tvHeaderTitle = (TextView) header.findViewById(R.id.header_title);
+//        tvHeaderTitle = (TextView) header.findViewById(R.id.header_title);
         tvHeaderTitle.setText(tittle);
 
         return new AlertDialog.Builder(getContext())
@@ -70,7 +70,7 @@ public class SingleChoiceListDialog extends EasyDialogFragment<Integer> {
                                 dismiss();
                             }
                         })
-                .setCustomTitle(header)
+//                .setCustomTitle(header)
                 .create();
     }
 
