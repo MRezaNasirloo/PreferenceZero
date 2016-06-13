@@ -57,7 +57,6 @@
         <com.sixthsolution.materialpreferences.preferences.EasyPreferencesHeader
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:ep_icon="@drawable/default_icon"
             app:ep_key="pref_header"
             app:ep_title="@string/clock_date_setting"
             android:layout_marginBottom="@dimen/default_margin">
@@ -101,7 +100,6 @@
         <com.sixthsolution.materialpreferences.preferences.EasyPreferencesHeader
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:ep_icon="@drawable/default_icon"
             app:ep_key="pref_header"
             app:ep_title="@string/weather_settings">
 
