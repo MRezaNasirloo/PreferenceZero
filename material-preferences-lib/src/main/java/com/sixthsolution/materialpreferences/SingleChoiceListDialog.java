@@ -11,14 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-//import com.hannesdorfmann.fragmentargs.annotation.Arg;
-//import com.hannesdorfmann.fragmentargs.annotation.FragmentWithArgs;
 
 /**
  * @author : Pedramrn@gmail.com Created on: 2016-01-07
  */
 public class SingleChoiceListDialog extends EasyDialogFragment<Integer> {
-    private TextView tvHeaderTitle;
+//    private TextView tvHeaderTitle;
 
     public SingleChoiceListDialog() {
         // Required empty public constructor
@@ -55,10 +53,11 @@ public class SingleChoiceListDialog extends EasyDialogFragment<Integer> {
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
+        // TODO: 2016-06-19 make the header optional
 //        View header = inflateLayout();
 
 //        tvHeaderTitle = (TextView) header.findViewById(R.id.header_title);
-        tvHeaderTitle.setText(tittle);
+//        tvHeaderTitle.setText(tittle);
 
         return new AlertDialog.Builder(getContext())
                 .setSingleChoiceItems(arrayEntries,
