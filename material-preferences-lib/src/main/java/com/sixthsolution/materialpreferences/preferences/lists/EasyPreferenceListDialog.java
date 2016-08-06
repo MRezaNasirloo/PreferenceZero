@@ -61,7 +61,9 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
         try {
             mArrayEntries = typedArray.getTextArray(R.styleable.EasyPreference_android_entries);
             mArrayValues = typedArray.getTextArray(R.styleable.EasyPreference_android_entryValues);
+            // FIXME: 2016-08-06 find the index of default value in array values returns 0 if cannot be found
             mDefault = Integer.parseInt(typedArray.getString(R.styleable.EasyPreference_ep_default));
+
         } catch (NumberFormatException e) {
             e.printStackTrace();
             throw new NumberFormatException("Cant use this this value as integer." + e.getMessage());
