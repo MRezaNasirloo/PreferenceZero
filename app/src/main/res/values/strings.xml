@@ -24,9 +24,9 @@
         <item>Arabic</item>
     </string-array>
     <string-array name="pref_language_list_value">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
+        <item>en</item>
+        <item>fa</item>
+        <item>ar</item>
     </string-array>
 
     <string name="clock_date_setting">Clock And Date Settings</string>
@@ -53,9 +53,9 @@
         <item>provider 3</item>
     </string-array>
     <string-array name="pref_weather_provider_list_value">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
+        <item>baz</item>
+        <item>bar</item>
+        <item>foo</item>
     </string-array>
 
     <string name="radar_provider">Radar Provider</string>
@@ -65,9 +65,9 @@
         <item>Radar 3</item>
     </string-array>
     <string-array name="pref_radar_provider_list_value">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
+        <item>10</item>
+        <item>22</item>
+        <item>33</item>
     </string-array>
 
     <string name="measurement_unit">Measurement Units</string>

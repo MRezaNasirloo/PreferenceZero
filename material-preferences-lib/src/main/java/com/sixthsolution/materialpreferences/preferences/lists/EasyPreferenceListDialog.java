@@ -31,6 +31,7 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
     protected TextView mTextViewSummary;
     private TextView tvDetail;
     private ImageView imgIcon;
+    private String index = "_$Index$";
 
     @Override
     public int getLayout() {
@@ -130,12 +131,15 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
 
     @Override
     public void save(Integer pref) {
-        sharedPreferences.edit().putInt(key, pref).apply();
+        final SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(key + index, pref);
+        editor.putString(key, mArrayValues[pref].toString());
+        editor.apply();
 
     }
 
     @Override
     public Integer load() {
-        return sharedPreferences.getInt(key, mDefault);
+        return sharedPreferences.getInt(key + index, mDefault);
     }
 }

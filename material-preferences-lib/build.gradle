@@ -42,7 +42,7 @@ publish {
     uploadName = 'preferences'
     repoName = 'public-maven'
     artifactId = 'preferences'
-    publishVersion = '1.0.0-beta6'
+    publishVersion = '1.0.0-beta7'
     desc = 'Painless customizable preference views'
     website = 'https://gitlab.com/6thsolution/material-preferences'
     repository = 'https://gitlab.com/6thsolution/material-preferences.git'
