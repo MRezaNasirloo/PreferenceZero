@@ -4,9 +4,10 @@
 
 A replacement for the built-in Android Preference UI API, completely based on custom views not Preference.
 
-NOTE: This project was developed to backport Material Design style for pre-Lollipop
+**NOTE:** This project was developed to backport Material Design style for pre-Lollipop
 and being easily customizable and the ability to use the visual layout editor,
-However Android Studio and Support Library includes these features now.
+However Android Studio and Support Library includes these features now, but still this project has 
+some useful features. 
 
 ![Demo gif](https://media.giphy.com/media/559q8q0bendPqKox8n/giphy.gif)
 
