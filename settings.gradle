@@ -1,1 +1,2 @@
-include ':app', ':material-preferences-lib'
+include ':app', ':preference-zero'
+rootProject.name = "PreferenceZero"

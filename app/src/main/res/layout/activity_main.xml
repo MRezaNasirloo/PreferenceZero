@@ -1,17 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.v4.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.sixthsolution.materialpreferencesdemo.MainActivity">
+    tools:context=".MainActivity"
+    android:background="#dcdcdc"
+    >
 
-    <TextView
-        android:text="Hello World!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <com.mrezanasirloo.preferencezero.preferences.PreferencesHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:pz_icon="@drawable/default_icon"
+            app:pz_title="@string/location_setting"
+            android:layout_marginBottom="@dimen/default_margin">
+
+            <com.mrezanasirloo.preferencezero.preferences.PreferenceSwitch
+                android:id="@+id/preferences_enable_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:pz_default="true"
+                app:pz_key="pref_enable_location"
+                app:pz_title="Enable Location"
+                />
+
+            <com.mrezanasirloo.preferencezero.preferences.PreferenceSwitch
+                android:id="@+id/preferences_auto_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:pz_default="false"
+                app:pz_key="pref_auto_location"
+                app:pz_dependency="pref_enable_location"
+                app:pz_title="@string/auto_location"
+                />
+
+            <com.mrezanasirloo.preferencezero.preferences.PreferenceCheckBox
+                android:id="@+id/preferences_auto_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:pz_default="false"
+                app:pz_detail_on="Automatic Update"
+                app:pz_key="pref_auto_update"
+                app:pz_title="Auto Update"
+                app:pz_dependency="pref_enable_location"
+                />
+
+            <com.mrezanasirloo.preferencezero.preferences.PreferencesSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:pz_key="pref_seek_bar"
+                app:pz_title="Brightness"
+                app:pz_min_value="5"
+                app:pz_max_value="15"
+                app:pz_dependency="pref_enable_location"
+                />
+
+        </com.mrezanasirloo.preferencezero.preferences.PreferencesHeader>
+
+        <com.mrezanasirloo.preferencezero.preferences.PreferencesHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:pz_key="pref_header"
+            app:pz_title="@string/clock_date_setting"
+            android:layout_marginBottom="@dimen/default_margin">
+
+            <com.mrezanasirloo.preferencezero.preferences.lists.PreferenceListDialog
+                android:id="@+id/preferences_choose_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/pref_language_list_entries"
+                android:entryValues="@array/pref_language_list_value"
+                app:pz_default="1"
+                app:pz_detail_on="change interface language"
+                app:pz_key="pref_choose_language"
+                app:pz_title="@string/language"
+                />
+
+            <com.mrezanasirloo.preferencezero.preferences.lists.PreferenceListDialog
+                android:id="@+id/preferences_choose_date_format"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/pref_date_format_list_entries"
+                android:entryValues="@array/pref_date_format_list_value"
+                app:pz_default="1"
+                app:pz_key="pref_date_format"
+                app:pz_title="@string/date_format"
+                />
+
+            <com.mrezanasirloo.preferencezero.preferences.PreferenceSwitch
+                android:id="@+id/preferences_clock_format"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:pz_default="true"
+                app:pz_detail_off="Show time like 13:00"
+                app:pz_detail_on="Show time like 1:00 PM"
+                app:pz_key="pref_clock_format"
+                app:pz_title="@string/clock_format"
+                />
+
+        </com.mrezanasirloo.preferencezero.preferences.PreferencesHeader>
+
+        <com.mrezanasirloo.preferencezero.preferences.PreferencesHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:pz_key="pref_header"
+            app:pz_title="@string/weather_settings">
+
+            <com.mrezanasirloo.preferencezero.preferences.PreferenceSwitch
+                android:id="@+id/preferences_feel_temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:pz_default="true"
+                app:pz_detail_on="Real temp may be 24 but it feels like 18"
+                app:pz_key="pref_feel_temp"
+                app:pz_title="@string/feel_temp"
+                />
+
+
+            <com.mrezanasirloo.preferencezero.preferences.lists.PreferenceListDialog
+                android:id="@+id/preferences_choose_weather_provider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/pref_city_names"
+                android:entryValues="@array/pref_city_names"
+                app:pz_default="1"
+                app:pz_key="pref_city_name"
+                app:pz_title="Location"
+                />
+
+            <com.mrezanasirloo.preferencezero.preferences.PreferenceSwitch
+                android:id="@+id/preferences_measurement_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:pz_default="true"
+                app:pz_key="pref_measurement_unit"
+                app:pz_title="@string/measurement_unit"
+                />
+
+            <com.mrezanasirloo.preferencezero.preferences.PreferenceDialogColorChooser
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:pz_key="pref_color_chooser"
+                app:pz_title="@string/theme_color"
+                app:pz_default="1"
+                />
+
+        </com.mrezanasirloo.preferencezero.preferences.PreferencesHeader>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

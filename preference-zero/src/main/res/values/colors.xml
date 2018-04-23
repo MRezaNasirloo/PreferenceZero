@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#CCC</color>
+    <color name="gray_light">#CCC</color>
+    <color name="blue">#398be2</color>
+
+    <array name="demo_colors">
+        <item>#6e1313</item>
+        <item>#9e9e36</item>
+        <item>#00ffb7</item>
+        <item>#a100ff</item>
+        <item>#1900ff</item>
+        <item>#ffe600</item>
+        <item>#ff7b00</item>
+        <item>#04393b</item>
+        <item>#bd83ff</item>
+        <item>#05863d</item>
+        <item>#e24c4c</item>
+        <item>#ff008c</item>
+    </array>
+</resources>

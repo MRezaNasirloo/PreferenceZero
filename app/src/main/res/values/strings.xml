@@ -1,3 +1,54 @@
 <resources>
-    <string name="app_name">Material Preferences Demo</string>
+    <string name="app_name">Preferences Zero</string>
+
+    <string-array name="pref_notification_how_to_show_list_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string name="location_setting">Location Settings</string>
+    <string name="auto_location">Auto Location</string>
+
+    <string name="language">Language</string>
+    <string-array name="pref_language_list_entries">
+        <item>English</item>
+        <item>Persian</item>
+        <item>Arabic</item>
+    </string-array>
+    <string-array name="pref_language_list_value">
+        <item>en</item>
+        <item>fa</item>
+        <item>ar</item>
+    </string-array>
+
+    <string name="clock_date_setting">Clock And Date Settings</string>
+    <string name="date_format">Date Format</string>
+    <string-array name="pref_date_format_list_entries">
+        <item>5/16/2016/</item>
+        <item>5 may, 2016</item>
+        <item>mon 5 may, 2016</item>
+    </string-array>
+    <string-array name="pref_date_format_list_value">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string name="clock_format">Clock Format</string>
+    <string name="feel_temp">Use Feel Like Temperature</string>
+
+    <string name="weather_settings">Weather Settings</string>
+    <string name="weather_provider">Weather Provider</string>
+    <string-array name="pref_city_names">
+        <item>New York</item>
+        <item>Tehran</item>
+        <item>Tokyo</item>
+    </string-array>
+
+    <string name="measurement_unit">Measurement Units</string>
+
+    <string name="theme_color">Theme Color</string>
+
 </resources>
