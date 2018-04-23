@@ -6,7 +6,7 @@ NOTE: This project was developed to backport Material Design style for pre-Lolli
 and being easily customizable and the ability to use the visual layout editor,
 However Android Studio and Support Library includes these features now.
 
-![Demo gif](https://media.giphy.com/media/559q8q0bendPqKox8n/giphy.gif*D4Zxe8gKFTtoF4LcZ8CoNw.gif)
+![Demo gif](https://media.giphy.com/media/559q8q0bendPqKox8n/giphy.gif)
 
 ### Features:
 
@@ -21,7 +21,7 @@ doesn't support `PreferenceManager.setDefaultValues(context, R.xml.some_pref, fa
 
 ##### Credits
 
-Many thanks to @mehdok for his contribution to this project.
+Many thanks to [@mehdok](https://github.com/mehdok) for his contribution to this project.
 
 #### License
 ```
