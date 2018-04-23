@@ -88,8 +88,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:ep_default="true"
-                app:ep_detail_off="show time like 13"
-                app:ep_detail_on="show time like 1pm"
+                app:ep_detail_off="Show time like 13:00"
+                app:ep_detail_on="Show time like 1:00 PM"
                 app:ep_key="pref_clock_format"
                 app:ep_title="@string/clock_format"
                 />
@@ -117,22 +117,11 @@
                 android:id="@+id/preferences_choose_weather_provider"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:entries="@array/pref_weather_provider_list_entries"
-                android:entryValues="@array/pref_weather_provider_list_value"
+                android:entries="@array/pref_city_names"
+                android:entryValues="@array/pref_city_names"
                 app:ep_default="1"
-                app:ep_key="pref_weather_provider"
-                app:ep_title="@string/weather_provider"
-                />
-
-            <com.mrezanasirloo.preferencezero.preferences.lists.PreferenceListDialog
-                android:id="@+id/preferences_choose_radar_provider"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:entries="@array/pref_radar_provider_list_entries"
-                android:entryValues="@array/pref_radar_provider_list_value"
-                app:ep_default="1"
-                app:ep_key="pref_radar_provider"
-                app:ep_title="@string/radar_provider"
+                app:ep_key="pref_city_name"
+                app:ep_title="Location"
                 />
 
             <com.mrezanasirloo.preferencezero.preferences.PreferenceSwitch

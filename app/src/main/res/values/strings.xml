@@ -1,12 +1,6 @@
 <resources>
-    <string name="app_name">Material Preferences Demo</string>
+    <string name="app_name">Preferences Zero</string>
 
-    <string-array name="pref_notification_how_to_show_list_entries">
-        <item>اعلان ها</item>
-        <item>واریز ها</item>
-        <item>پرداخت ها</item>
-        <item>همه</item>
-    </string-array>
     <string-array name="pref_notification_how_to_show_list_values">
         <item>1</item>
         <item>2</item>
@@ -47,27 +41,10 @@
 
     <string name="weather_settings">Weather Settings</string>
     <string name="weather_provider">Weather Provider</string>
-    <string-array name="pref_weather_provider_list_entries">
-        <item>provider 1</item>
-        <item>provider 2</item>
-        <item>provider 3</item>
-    </string-array>
-    <string-array name="pref_weather_provider_list_value">
-        <item>baz</item>
-        <item>bar</item>
-        <item>foo</item>
-    </string-array>
-
-    <string name="radar_provider">Radar Provider</string>
-    <string-array name="pref_radar_provider_list_entries">
-        <item>Radar 1</item>
-        <item>Radar 2</item>
-        <item>Radar 3</item>
-    </string-array>
-    <string-array name="pref_radar_provider_list_value">
-        <item>10</item>
-        <item>22</item>
-        <item>33</item>
+    <string-array name="pref_city_names">
+        <item>New York</item>
+        <item>Tehran</item>
+        <item>Tokyo</item>
     </string-array>
 
     <string name="measurement_unit">Measurement Units</string>

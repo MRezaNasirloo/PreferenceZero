@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // TODO: 2018-04-23 move this to attributes
         PreferenceSwitch tempSwitch = (PreferenceSwitch) findViewById(R.id.preferences_measurement_unit);
         tempSwitch.setOffText("F");
         tempSwitch.setOnText("C");
@@ -20,6 +21,5 @@ public class MainActivity extends AppCompatActivity {
         PreferenceSwitch clockSwitch = (PreferenceSwitch) findViewById(R.id.preferences_clock_format);
         clockSwitch.setOffText("24");
         clockSwitch.setOnText("12");
-        PreferenceCheckBox checkBox = (PreferenceCheckBox) findViewById(R.id.preferences_auto_update);
     }
 }
