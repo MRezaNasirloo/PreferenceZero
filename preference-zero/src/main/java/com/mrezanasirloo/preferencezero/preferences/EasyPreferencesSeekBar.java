@@ -1,4 +1,4 @@
-package com.sixthsolution.materialpreferences.preferences;
+package com.mrezanasirloo.preferencezero.preferences;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -8,8 +8,9 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.sixthsolution.materialpreferences.R;
-import com.sixthsolution.materialpreferences.preferences.lists.EasyPreferencesInteger;
+import com.mrezanasirloo.preferencezero.R;
+import com.mrezanasirloo.preferencezero.preferences.lists.EasyPreferencesInteger;
+
 
 /**
  * Created by mehdok on 6/8/2016.
@@ -113,7 +114,8 @@ public class EasyPreferencesSeekBar extends EasyPreferencesInteger implements
     }
 
     @Override
-    public void onStartTrackingTouch(SeekBar seekBar) {}
+    public void onStartTrackingTouch(SeekBar seekBar) {
+    }
 
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {

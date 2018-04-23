@@ -1,4 +1,4 @@
-package com.sixthsolution.materialpreferences;
+package com.mrezanasirloo.preferencezero;
 
 import android.support.v7.app.AppCompatActivity;
 

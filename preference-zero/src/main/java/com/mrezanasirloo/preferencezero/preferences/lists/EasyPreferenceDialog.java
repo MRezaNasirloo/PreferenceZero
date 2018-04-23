@@ -1,4 +1,4 @@
-package com.sixthsolution.materialpreferences.preferences.lists;
+package com.mrezanasirloo.preferencezero.preferences.lists;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -7,8 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.sixthsolution.materialpreferences.Showable;
-import com.sixthsolution.materialpreferences.preferences.EasyPreference;
+import com.mrezanasirloo.preferencezero.Showable;
+import com.mrezanasirloo.preferencezero.preferences.EasyPreference;
 
 /**
  * @author : Pedramrn@gmail.com Created on: 2016-01-06

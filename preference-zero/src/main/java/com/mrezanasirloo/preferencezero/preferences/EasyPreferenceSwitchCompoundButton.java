@@ -1,4 +1,4 @@
-package com.sixthsolution.materialpreferences.preferences;
+package com.mrezanasirloo.preferencezero.preferences;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -7,7 +7,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.sixthsolution.materialpreferences.R;
+import com.mrezanasirloo.preferencezero.R;
 
 /**
  * @author : Pedramrn@gmail.com Created on: 2016-01-05

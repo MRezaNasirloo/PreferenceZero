@@ -1,4 +1,4 @@
-package com.sixthsolution.materialpreferences.preferences;
+package com.mrezanasirloo.preferencezero.preferences;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,7 +10,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.sixthsolution.materialpreferences.R;
+import com.mrezanasirloo.preferencezero.R;
+
 
 /**
  * Created by mehdok on 5/16/2016.

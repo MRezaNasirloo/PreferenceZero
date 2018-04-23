@@ -1,4 +1,4 @@
-package com.sixthsolution.materialpreferences.preferences.lists;
+package com.mrezanasirloo.preferencezero.preferences.lists;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -10,15 +10,15 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.sixthsolution.materialpreferences.EasyDialogFragment;
-import com.sixthsolution.materialpreferences.R;
-import com.sixthsolution.materialpreferences.Showable;
-import com.sixthsolution.materialpreferences.SingleChoiceListDialog;
+import com.mrezanasirloo.preferencezero.EasyDialogFragment;
+import com.mrezanasirloo.preferencezero.R;
+import com.mrezanasirloo.preferencezero.Showable;
+import com.mrezanasirloo.preferencezero.SingleChoiceListDialog;
 
 
 /**
  * @author : Pedramrn@gmail.com Created on: 2016-01-06
- *
+ * <p>
  * It's Component to show a preferecne status and save/load the data from {@link SharedPreferences}
  */
 public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {

@@ -1,4 +1,4 @@
-package com.sixthsolution.materialpreferences.preferences;
+package com.mrezanasirloo.preferencezero.preferences;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -8,12 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import com.sixthsolution.materialpreferences.CircleView;
-import com.sixthsolution.materialpreferences.R;
-import com.sixthsolution.materialpreferences.Showable;
-import com.sixthsolution.materialpreferences.preferences.lists.EasyPreferenceDialog;
+import com.mrezanasirloo.preferencezero.CircleView;
+import com.mrezanasirloo.preferencezero.R;
+import com.mrezanasirloo.preferencezero.Showable;
+import com.mrezanasirloo.preferencezero.preferences.lists.EasyPreferenceDialog;
 
 import petrov.kristiyan.colorpicker.ColorPicker;
+
 
 /**
  * @author : Pedramrn@gmail.com Created on: 2016-01-06

@@ -22,7 +22,7 @@
         android:layout_marginStart="12dp"
         />
 
-    <com.sixthsolution.materialpreferences.CircleView
+    <com.mrezanasirloo.preferencezero.preferences.CircleView
         android:id="@+id/easy_color_preview"
         android:layout_width="24dp"
         android:layout_height="24dp"

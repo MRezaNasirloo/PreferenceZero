@@ -1,4 +1,4 @@
-package com.sixthsolution.materialpreferences;
+package com.mrezanasirloo.preferencezero;
 
 import android.content.Context;
 import android.content.res.TypedArray;

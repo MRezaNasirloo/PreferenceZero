@@ -1,4 +1,4 @@
-package com.sixthsolution.materialpreferences;
+package com.mrezanasirloo.preferencezero;
 
 /**
  * @author : Pedramrn@gmail.com

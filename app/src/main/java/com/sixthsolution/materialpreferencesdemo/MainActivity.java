@@ -3,8 +3,8 @@ package com.sixthsolution.materialpreferencesdemo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.sixthsolution.materialpreferences.preferences.EasyPreferenceCheckBox;
-import com.sixthsolution.materialpreferences.preferences.EasyPreferenceSwitch;
+import com.mrezanasirloo.preferencezero.preferences.EasyPreferenceCheckBox;
+import com.mrezanasirloo.preferencezero.preferences.EasyPreferenceSwitch;
 
 public class MainActivity extends AppCompatActivity {
 

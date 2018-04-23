@@ -1,10 +1,10 @@
-package com.sixthsolution.materialpreferences.preferences.lists;
+package com.mrezanasirloo.preferencezero.preferences.lists;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.sixthsolution.materialpreferences.preferences.EasyPreference;
+import com.mrezanasirloo.preferencezero.preferences.EasyPreference;
 
 /**
  * Created by mehdok on 6/8/2016.
