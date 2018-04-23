@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 /**
  * @author : Pedramrn@gmail.com Created on: 2016-01-07
  */
-public class SingleChoiceListDialog extends EasyDialogFragment<Integer> {
+public class SingleChoiceListDialog extends DialogFragment<Integer> {
 //    private TextView tvHeaderTitle;
 
     public SingleChoiceListDialog() {
@@ -79,6 +79,6 @@ public class SingleChoiceListDialog extends EasyDialogFragment<Integer> {
      */
     protected View inflateLayout() {
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        return inflater.inflate(R.layout.easy_preference_list_dialog_header, ((ViewGroup) getView()), false);
+        return inflater.inflate(R.layout.preference_list_dialog_header, ((ViewGroup) getView()), false);
     }
 }

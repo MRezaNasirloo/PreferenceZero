@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style parent="TextAppearance.AppCompat" name="Medium"></style>
-
     <style name="GroupHeaderTitle" parent="TextAppearance.AppCompat.Medium">
         <item name="android:textColor">?attr/colorPrimary</item>
         <item name="android:gravity">start</item>
