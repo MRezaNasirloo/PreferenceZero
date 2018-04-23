@@ -23,12 +23,21 @@
             android:layout_marginBottom="@dimen/default_margin">
 
             <com.mrezanasirloo.preferencezero.preferences.PreferenceSwitch
+                android:id="@+id/preferences_enable_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ep_default="true"
+                app:ep_key="pref_enable_location"
+                app:ep_title="Enable Location"
+                />
+
+            <com.mrezanasirloo.preferencezero.preferences.PreferenceSwitch
                 android:id="@+id/preferences_auto_location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:ep_default="false"
-                app:ep_icon="@drawable/default_icon"
                 app:ep_key="pref_auto_location"
+                app:ep_dependency="pref_enable_location"
                 app:ep_title="@string/auto_location"
                 />
 
@@ -40,6 +49,7 @@
                 app:ep_detail_on="Automatic Update"
                 app:ep_key="pref_auto_update"
                 app:ep_title="Auto Update"
+                app:ep_dependency="pref_enable_location"
                 />
 
             <com.mrezanasirloo.preferencezero.preferences.PreferencesSeekBar
@@ -49,6 +59,7 @@
                 app:ep_title="Brightness"
                 app:ep_min_value="5"
                 app:ep_max_value="15"
+                app:ep_dependency="pref_enable_location"
                 />
 
         </com.mrezanasirloo.preferencezero.preferences.PreferencesHeader>

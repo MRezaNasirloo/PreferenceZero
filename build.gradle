@@ -16,8 +16,6 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-        mavenCentral()
-        maven { url "http://dl.bintray.com/6thsolution/public-maven" }
     }
     tasks.withType(Javadoc) {
         options.addStringOption('Xdoclint:none', '-quiet')

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.sixthsolution.materialpreferencesdemo"
+        applicationId "com.mrezanasirloo.preferencezero.sample"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
