@@ -62,7 +62,7 @@ public class PreferenceListDialog extends PreferenceDialog<Integer> {
             mArrayEntries = typedArray.getTextArray(R.styleable.PreferenceZero_android_entries);
             mArrayValues = typedArray.getTextArray(R.styleable.PreferenceZero_android_entryValues);
             // FIXME: 2016-08-06 find the index of default value in array values returns 0 if cannot be found
-            mDefault = Integer.parseInt(typedArray.getString(R.styleable.PreferenceZero_ep_default));
+            mDefault = Integer.parseInt(typedArray.getString(R.styleable.PreferenceZero_pz_default));
 
         } catch (NumberFormatException e) {
             e.printStackTrace();

@@ -55,8 +55,8 @@ public class PreferencesHeader extends CardView {
         // Load attributes
         final TypedArray typedArray = getContext().obtainStyledAttributes(
                 attrs, R.styleable.PreferenceZero, defStyleAttr, 0);
-        tittle = typedArray.getString(R.styleable.PreferenceZero_ep_title);
-        iconResId = typedArray.getResourceId(R.styleable.PreferenceZero_ep_icon, -1);
+        tittle = typedArray.getString(R.styleable.PreferenceZero_pz_title);
+        iconResId = typedArray.getResourceId(R.styleable.PreferenceZero_pz_icon, -1);
 
         tvTitle.setText(tittle);
 

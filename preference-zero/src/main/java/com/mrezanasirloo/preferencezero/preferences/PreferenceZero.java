@@ -37,13 +37,13 @@ public abstract class PreferenceZero<T> extends RelativeLayout
     protected abstract int getLayout();
 
     public PreferenceZero(Context context) {
-        super(context, null, R.attr.ep_style);
+        super(context, null, R.attr.pz_style);
         init(context, null, 0);
 
     }
 
     public PreferenceZero(Context context, AttributeSet attrs) {
-        super(context, attrs, R.attr.ep_style);
+        super(context, attrs, R.attr.pz_style);
         init(context, attrs, 0);
     }
 
@@ -60,17 +60,17 @@ public abstract class PreferenceZero<T> extends RelativeLayout
         final TypedArray typedArray = getContext().obtainStyledAttributes(
                 attrs, R.styleable.PreferenceZero, defStyleAttr, 0);
 
-        key = typedArray.getString(R.styleable.PreferenceZero_ep_key);
+        key = typedArray.getString(R.styleable.PreferenceZero_pz_key);
         if (key == null) {
-            throw new RuntimeException("You must set ep_key, it is required");
+            throw new RuntimeException("You must set pz_key, it is required");
         }
 
-        tittle = typedArray.getString(R.styleable.PreferenceZero_ep_title);
-        summary = typedArray.getString(R.styleable.PreferenceZero_ep_summary);
-        dependency = typedArray.getString(R.styleable.PreferenceZero_ep_dependency);
-        detailTextON = typedArray.getString(R.styleable.PreferenceZero_ep_detail_on);
-        detailTextOFF = typedArray.getString(R.styleable.PreferenceZero_ep_detail_off);
-        iconResId = typedArray.getResourceId(R.styleable.PreferenceZero_ep_icon, -1);
+        tittle = typedArray.getString(R.styleable.PreferenceZero_pz_title);
+        summary = typedArray.getString(R.styleable.PreferenceZero_pz_summary);
+        dependency = typedArray.getString(R.styleable.PreferenceZero_pz_dependency);
+        detailTextON = typedArray.getString(R.styleable.PreferenceZero_pz_detail_on);
+        detailTextOFF = typedArray.getString(R.styleable.PreferenceZero_pz_detail_off);
+        iconResId = typedArray.getResourceId(R.styleable.PreferenceZero_pz_icon, -1);
 
         typedArray.recycle();
 

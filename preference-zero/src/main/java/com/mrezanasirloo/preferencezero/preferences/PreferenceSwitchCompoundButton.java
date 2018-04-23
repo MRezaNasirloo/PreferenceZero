@@ -55,7 +55,7 @@ public abstract class PreferenceSwitchCompoundButton extends PreferenceBoolean i
         final TypedArray typedArray = getContext().obtainStyledAttributes(
                 attrs, R.styleable.PreferenceZero, defStyleAttr, 0);
 
-        defaultValue = typedArray.getBoolean(R.styleable.PreferenceZero_ep_default, defaultValue);
+        defaultValue = typedArray.getBoolean(R.styleable.PreferenceZero_pz_default, defaultValue);
         typedArray.recycle();
 
         // Save the default value if is not set already.

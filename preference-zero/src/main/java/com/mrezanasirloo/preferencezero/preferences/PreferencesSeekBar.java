@@ -55,13 +55,13 @@ public class PreferencesSeekBar extends PreferencesInteger implements
         final TypedArray typedArray = getContext().obtainStyledAttributes(
                 attrs, R.styleable.PreferenceZero, defStyleAttr, 0);
 
-        defaultValue = typedArray.getInt(R.styleable.PreferenceZero_ep_default, defaultValue);
-        minValue = typedArray.getInt(R.styleable.PreferenceZero_ep_min_value, 0);
-        maxValue = typedArray.getInt(R.styleable.PreferenceZero_ep_max_value, 10);
+        defaultValue = typedArray.getInt(R.styleable.PreferenceZero_pz_default, defaultValue);
+        minValue = typedArray.getInt(R.styleable.PreferenceZero_pz_min_value, 0);
+        maxValue = typedArray.getInt(R.styleable.PreferenceZero_pz_max_value, 10);
         if (defaultValue < minValue || defaultValue > maxValue)
             defaultValue = minValue;
 
-        showValue = typedArray.getBoolean(R.styleable.PreferenceZero_ep_show_value, true);
+        showValue = typedArray.getBoolean(R.styleable.PreferenceZero_pz_show_value, true);
         typedArray.recycle();
 
         tvValue = (TextView) findViewById(R.id.easy_seekbar_value);

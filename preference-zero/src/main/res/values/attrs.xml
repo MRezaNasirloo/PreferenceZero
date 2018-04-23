@@ -7,18 +7,18 @@
     </declare-styleable>
 
     <declare-styleable name="PreferenceZero">
-        <attr name="ep_key" format="string"/>
-        <attr name="ep_title" format="string"/>
-        <attr name="ep_summary" format="string"/>
-        <attr name="ep_default" format="string"/>
-        <attr name="ep_style" format="reference"/>
-        <attr name="ep_dependency" format="string"/>
-        <attr name="ep_icon" format="reference"/>
-        <attr name="ep_detail_on" format="string"/>
-        <attr name="ep_detail_off" format="string"/>
-        <attr name="ep_min_value" format="integer"/>
-        <attr name="ep_max_value" format="integer"/>
-        <attr name="ep_show_value" format="boolean"/>
+        <attr name="pz_key" format="string"/>
+        <attr name="pz_title" format="string"/>
+        <attr name="pz_summary" format="string"/>
+        <attr name="pz_default" format="string"/>
+        <attr name="pz_style" format="reference"/>
+        <attr name="pz_dependency" format="string"/>
+        <attr name="pz_icon" format="reference"/>
+        <attr name="pz_detail_on" format="string"/>
+        <attr name="pz_detail_off" format="string"/>
+        <attr name="pz_min_value" format="integer"/>
+        <attr name="pz_max_value" format="integer"/>
+        <attr name="pz_show_value" format="boolean"/>
         <attr name="android:entries"/>
         <attr name="android:entryValues"/>
     </declare-styleable>

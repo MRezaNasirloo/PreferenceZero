@@ -52,7 +52,7 @@ public class PreferenceDialogColorChooser extends PreferenceDialog<Integer> {
                 attrs, R.styleable.PreferenceZero, defStyleAttr, 0);
         try {
             defaultValue =
-                    Integer.parseInt(typedArray.getString(R.styleable.PreferenceZero_ep_default));
+                    Integer.parseInt(typedArray.getString(R.styleable.PreferenceZero_pz_default));
         } catch (NumberFormatException e) {
             e.printStackTrace();
             throw new NumberFormatException(
