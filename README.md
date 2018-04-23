@@ -1,5 +1,7 @@
 # Preference Zero
 
+[ ![Download](https://api.bintray.com/packages/mrezanasirloo/maven/preference-zero/images/download.svg) ](https://bintray.com/mrezanasirloo/maven/preference-zero/_latestVersion)
+
 A replacement for the built-in Android Preference UI API, completely based on custom views not Preference.
 
 NOTE: This project was developed to backport Material Design style for pre-Lollipop
@@ -13,6 +15,11 @@ However Android Studio and Support Library includes these features now.
 1. Convenient to customize and very flexible.
 2. Can be used in any layout file.
 3. Supports nested dependencies on other preferences.
+
+### Download
+```groovy
+implementation 'com.mrezanasirloo:preference-zero:0.9.1'
+```
 
 #### Limitation:
 
