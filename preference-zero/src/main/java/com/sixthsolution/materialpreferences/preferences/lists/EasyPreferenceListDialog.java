@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.sixthsolution.materialpreferences.EasyDialogFragment;
 import com.sixthsolution.materialpreferences.R;
-import com.sixthsolution.materialpreferences.ShowAble;
+import com.sixthsolution.materialpreferences.Showable;
 import com.sixthsolution.materialpreferences.SingleChoiceListDialog;
 
 
@@ -118,7 +118,7 @@ public class EasyPreferenceListDialog extends EasyPreferenceDialog<Integer> {
 
     @NonNull
     @Override
-    protected ShowAble getDialog() {
+    protected Showable getDialog() {
         // TODO: 2016-05-03 use your own builder or bundle ---> DONE
         return SingleChoiceListDialog.newInstance(load(), mArrayEntries, tittle)
                 .setOnItemSelectedListener(new EasyDialogFragment.OnItemSelectedListener<Integer>() {

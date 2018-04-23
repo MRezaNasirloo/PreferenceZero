@@ -6,12 +6,11 @@ import android.content.res.TypedArray;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
-import android.view.View;
 import android.widget.TextView;
 
 import com.sixthsolution.materialpreferences.CircleView;
 import com.sixthsolution.materialpreferences.R;
-import com.sixthsolution.materialpreferences.ShowAble;
+import com.sixthsolution.materialpreferences.Showable;
 import com.sixthsolution.materialpreferences.preferences.lists.EasyPreferenceDialog;
 
 import petrov.kristiyan.colorpicker.ColorPicker;
@@ -90,8 +89,8 @@ public class EasyPreferenceDialogColorChooser extends EasyPreferenceDialog<Integ
 
     @NonNull
     @Override
-    protected ShowAble getDialog() {
-        return new ShowAble() {
+    protected Showable getDialog() {
+        return new Showable() {
             @Override
             public void show(AppCompatActivity activity) {
                 ColorPicker colorPicker = new ColorPicker(getContext());
