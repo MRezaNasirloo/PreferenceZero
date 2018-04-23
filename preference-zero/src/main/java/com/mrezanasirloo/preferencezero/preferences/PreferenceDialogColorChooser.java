@@ -17,7 +17,7 @@ import petrov.kristiyan.colorpicker.ColorPicker;
 
 
 /**
- * @author : Pedramrn@gmail.com Created on: 2016-01-06
+ * @author : M.Reza.Nasirloo@gmail.com Created on: 2016-01-06
  */
 public class PreferenceDialogColorChooser extends PreferenceDialog<Integer> {
 

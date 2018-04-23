@@ -1,7 +1,7 @@
 package com.mrezanasirloo.preferencezero;
 
 /**
- * @author : Pedramrn@gmail.com
+ * @author : M.Reza.Nasirloo@gmail.com
  *         Created on: 2016-01-05
  */
 public interface PersistPref<T> {

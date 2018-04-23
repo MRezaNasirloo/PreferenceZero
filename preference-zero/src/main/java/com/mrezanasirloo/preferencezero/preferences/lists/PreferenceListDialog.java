@@ -17,7 +17,7 @@ import com.mrezanasirloo.preferencezero.SingleChoiceListDialog;
 
 
 /**
- * @author : Pedramrn@gmail.com Created on: 2016-01-06
+ * @author : M.Reza.Nasirloo@gmail.com Created on: 2016-01-06
  * <p>
  * It's Component to show a preferecne status and save/load the data from {@link SharedPreferences}
  */

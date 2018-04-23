@@ -11,7 +11,7 @@ import com.mrezanasirloo.preferencezero.Showable;
 import com.mrezanasirloo.preferencezero.preferences.PreferenceZero;
 
 /**
- * @author : Pedramrn@gmail.com Created on: 2016-01-06
+ * @author : M.Reza.Nasirloo@gmail.com Created on: 2016-01-06
  *
  * Base class for List type preferecnces
  */

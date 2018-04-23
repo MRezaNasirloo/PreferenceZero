@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 
 /**
- * @author : Pedramrn@gmail.com Created on: 2016-01-07
+ * @author : M.Reza.Nasirloo@gmail.com Created on: 2016-01-07
  */
 public class SingleChoiceListDialog extends DialogFragment<Integer> {
 //    private TextView tvHeaderTitle;

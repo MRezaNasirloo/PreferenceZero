@@ -14,7 +14,7 @@ import com.mrezanasirloo.preferencezero.PersistPref;
 import com.mrezanasirloo.preferencezero.R;
 
 /**
- * @author : Pedramrn@gmail.com Created on: 2016-01-05
+ * @author : M.Reza.Nasirloo@gmail.com Created on: 2016-01-05
  *         <p>
  *         A replacement for android {@link Preference} class. This the base class for
  *         all Preferences inside this package.

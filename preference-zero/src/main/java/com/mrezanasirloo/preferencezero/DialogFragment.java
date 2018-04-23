@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatDialogFragment;
 
 
 /**
- * @author : Pedramrn@gmail.com Created on: 2016-01-07
+ * @author : M.Reza.Nasirloo@gmail.com Created on: 2016-01-07
  *
  * Its the base class for showing a dialog to user, it is not responsible for any save or load data
  */

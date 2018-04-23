@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.mrezanasirloo.preferencezero.R;
 
 /**
- * @author : Pedramrn@gmail.com Created on: 2016-01-05
+ * @author : M.Reza.Nasirloo@gmail.com Created on: 2016-01-05
  */
 public abstract class PreferenceSwitchCompoundButton extends PreferenceBoolean implements
         CompoundButton.OnCheckedChangeListener {
